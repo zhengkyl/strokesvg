@@ -1,0 +1,11 @@
+{
+  "name": "strokesvg",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "svgo --recursive -f ./src -o ./dist"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "svgo": "^3.0.2"
+  }
+}
