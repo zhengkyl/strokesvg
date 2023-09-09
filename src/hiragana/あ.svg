@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   sodipodi:docname="あ.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   id="svg82337"
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
    version="2"
-   viewBox="0 0 40 40"
-   height="40"
-   width="40"
+   id="svg82337"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="あ.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,87 +25,88 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="11.313709"
-     inkscape:cx="17.545087"
-     inkscape:cy="19.843184"
+     inkscape:zoom="1"
+     inkscape:cx="566.49997"
+     inkscape:cy="502.49998"
      inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg82337"
+     inkscape:current-layer="layer1"
      viewbox-width="10.5832"
      scale-x="0.26458"
      inkscape:snap-global="true"
      inkscape:snap-bbox="false"
-     inkscape:snap-page="true"
-     inkscape:snap-midpoints="true" />
+     inkscape:snap-page="false"
+     inkscape:snap-midpoints="false"
+     inkscape:object-paths="true" />
   <defs
      id="defs82334">
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath6365">
+       id="clipPath21313">
       <use
          x="0"
          y="0"
-         xlink:href="#path2554"
-         id="use6367"
+         xlink:href="#use6367"
+         id="use21315"
          width="100%"
          height="100%" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath6371">
+       id="clipPath21319">
       <use
          x="0"
          y="0"
-         xlink:href="#path2558"
-         id="use6373"
+         xlink:href="#use6373"
+         id="use21321"
          width="100%"
          height="100%" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath6377">
+       id="clipPath21325">
       <use
          x="0"
          y="0"
-         xlink:href="#path2562"
-         id="use6379"
+         xlink:href="#use6379"
+         id="use21327"
          width="100%"
          height="100%" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath6383">
+       id="clipPath21331">
       <use
          x="0"
          y="0"
-         xlink:href="#path2566"
-         id="use6385"
+         xlink:href="#use6385"
+         id="use21333"
          width="100%"
          height="100%" />
     </clipPath>
   </defs>
   <g
-     id="g6254">
+     id="g21339">
     <path
-       d="m 12.400609,8.48094 q 3.52,0 6.96,-0.2 3.44,-0.2 6.6,-0.6 3.2,-0.4 5.999996,-1.04 l 0.04,2.96 q -2.16,0.36 -4.679996,0.68 -2.48,0.28 -5.08,0.52 -2.6,0.2 -5.12,0.32 -2.52,0.12 -4.76,0.12 -0.84,0 -2.04,-0.04 -1.2,-0.08 -2.4,-0.12 -1.2,-0.08 -2.04,-0.12 l -0.08,-3 q 0.72,0.12 1.96,0.24 1.24,0.12 2.52,0.2 1.28,0.08 2.12,0.08 z"
-       id="path2554"
-       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#fc2b0e;fill-opacity:1" />
+       d="m 317.45559,217.11206 q 90.112,0 178.176,-5.12 88.064,-5.12 168.96,-15.36 81.92,-10.24 153.5999,-26.624 l 1.024,75.776 q -55.296,9.216 -119.8079,17.408 -63.488,7.168 -130.048,13.312 -66.56,5.12 -131.072,8.192 -64.512,3.072 -121.856,3.072 -21.504,0 -52.224,-1.024 -30.72,-2.048 -61.44,-3.072 -30.72,-2.048 -52.224,-3.072 l -2.048,-76.8 q 18.432,3.072 50.176,6.144 31.744,3.072 64.512,5.12 32.768,2.048 54.272,2.048 z"
+       id="use6367"
+       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#fc2b0e;fill-opacity:1;stroke-width:25.6" />
     <path
-       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#fcd90e;fill-opacity:1"
-       d="m 18.880609,3.52094 q -0.16,0.36 -0.28,0.88 -0.08,0.48 -0.2,0.92 -0.32,1.64 -0.64,4.16 -0.32,2.52 -0.52,5.4 -0.2,2.84 -0.2,5.6 0,2.56 0.32,5 0.36,2.44 0.88,4.68 0.56,2.2 1.16,4.08 l -2.88,0.88 q -0.6,-1.8 -1.12,-4.16 -0.52,-2.4 -0.84,-5 -0.32,-2.64 -0.32,-5.16 0,-2.08 0.12,-4.24 0.16,-2.16 0.36,-4.2 0.2,-2.08 0.36,-3.88 0.2,-1.8 0.36,-3.12 0.04,-0.52 0.08,-1.04 0.04,-0.52 0,-0.88 z"
-       id="path2558" />
+       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#fcd90e;fill-opacity:1;stroke-width:25.6"
+       d="m 483.34359,90.136064 q -4.096,9.216 -7.168,22.527996 -2.048,12.288 -5.12,23.552 -8.192,41.984 -16.384,106.496 -8.192,64.512 -13.312,138.24 -5.12,72.704 -5.12,143.36 0,65.536 8.192,128 9.216,62.464 22.528,119.808 14.336,56.32 29.696,104.448 l -73.728,22.528 q -15.36,-46.08 -28.672,-106.496 -13.312,-61.44 -21.504,-128 -8.192,-67.584 -8.192,-132.096 0,-53.248 3.072,-108.544 4.096,-55.296 9.216,-107.52 5.12,-53.248 9.216,-99.328 5.12,-46.08 9.216,-79.872 1.024,-13.312 2.048,-26.624 1.024,-13.311996 0,-22.527996 z"
+       id="use6373" />
     <path
-       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#83e43a;fill-opacity:1;stroke:none;stroke-opacity:0.631373"
-       d="m 29.080609,13.16094 c -0.08,0.16 -0.173333,0.38667 -0.28,0.68 -0.08,0.26667 -0.173333,0.54667 -0.28,0.84 -0.08,0.26667 -0.16,0.52 -0.24,0.76 -0.8,2.45333 -1.76,4.70667 -2.88,6.76 -1.12,2.02667 -2.333333,3.84 -3.64,5.44 -1.306667,1.57333 -2.653333,2.89333 -4.04,3.96 -1.306667,0.98667 -2.72,1.81333 -4.24,2.48 -1.52,0.66667 -2.986667,1 -4.4,1 -0.853333,0 -1.64,-0.18667 -2.36,-0.56 -0.72,-0.37333 -1.293333,-0.93333 -1.72,-1.68 -0.426667,-0.74667 -0.64,-1.68 -0.64,-2.8 0,-1.36 0.293333,-2.70667 0.88,-4.04 0.586667,-1.36 1.386667,-2.64 2.4,-3.84 1.04,-1.2 2.213333,-2.26667 3.52,-3.2 1.333333,-0.96 2.478112,-1.635674 3.971445,-2.222344 l 0.998907,2.464307 c -1.493333,0.66667 -3.477019,1.798037 -4.730352,2.918037 -1.226667,1.12 -2.2,2.33333 -2.92,3.64 -0.72,1.28 -1.08,2.53333 -1.08,3.76 0,0.82667 0.186667,1.45333 0.56,1.88 0.4,0.4 0.973333,0.6 1.72,0.6 0.986667,0 2.093333,-0.28 3.32,-0.84 1.253333,-0.56 2.533333,-1.41333 3.84,-2.56 1.786667,-1.54667 3.44,-3.44 4.96,-5.68 1.546667,-2.24 2.773333,-4.98667 3.68,-8.24 0.05333,-0.21333 0.106667,-0.45333 0.16,-0.72 0.05333,-0.26667 0.106667,-0.54667 0.16,-0.84 0.08,-0.29333 0.12,-0.54667 0.12,-0.76 z"
-       id="path2562"
+       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#83e43a;fill-opacity:1;stroke:none;stroke-width:25.6;stroke-opacity:0.631373"
+       d="m 744.46359,336.92006 c -2.048,4.096 -4.43732,9.89876 -7.168,17.408 -2.048,6.82676 -4.43732,13.99476 -7.168,21.504 -2.048,6.82676 -4.096,13.312 -6.144,19.456 -20.48,62.80525 -45.056,120.49076 -73.728,173.056 -28.672,51.88276 -59.73332,98.304 -93.184,139.264 -33.45067,40.27725 -67.92532,74.06925 -103.424,101.376 -33.45067,25.25876 -69.632,46.42125 -108.544,63.488 -38.912,17.06676 -76.45867,25.6 -112.64,25.6 -21.84532,0 -41.984,-4.77875 -60.416,-14.336 -18.432,-9.55724 -33.10932,-23.89324 -44.032,-43.008 -10.92267,-19.11475 -16.384,-43.008 -16.384,-71.68 0,-34.816 7.50933,-69.29075 22.528,-103.424 15.01868,-34.816 35.49868,-67.584 61.44,-98.304 26.624,-30.72 56.66133,-58.02675 90.112,-81.92 34.13333,-24.576 63.43967,-41.87325 101.66899,-56.892 l 25.57202,63.08626 c -38.22932,17.06675 -89.01168,46.02974 -121.09701,74.70174 -31.40267,28.672 -56.32,59.73325 -74.752,93.184 -18.432,32.768 -27.648,64.85325 -27.648,96.256 0,21.16276 4.77868,37.20525 14.336,48.128 10.24,10.24 24.91733,15.36 44.032,15.36 25.25868,0 53.58933,-7.168 84.992,-21.504 32.08533,-14.336 64.85333,-36.18124 98.304,-65.536 45.73868,-39.59475 88.064,-88.064 126.976,-145.408 39.59468,-57.344 70.99733,-127.65875 94.208,-210.944 1.36525,-5.46124 2.73068,-11.60524 4.096,-18.432 1.36525,-6.82675 2.73068,-13.99475 4.096,-21.504 2.048,-7.50924 3.072,-13.99475 3.072,-19.456 z"
+       id="use6379"
        sodipodi:nodetypes="cccccccssssscccccccscsccccsccc" />
     <path
-       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#46c3e1;fill-opacity:1;stroke:none;stroke-opacity:0.631373"
-       d="m 15.132054,16.738596 c 1.306667,-0.48 2.988555,-0.964326 4.508555,-1.257656 1.546667,-0.29333 2.96,-0.44 4.24,-0.44 2.533333,0 4.719999,0.44 6.559996,1.32 1.84,0.88 3.25333,2.08 4.24,3.6 1.01333,1.49333 1.52,3.17333 1.52,5.04 0,1.44 -0.25333,2.81333 -0.76,4.12 -0.48,1.30667 -1.25333,2.50667 -2.32,3.6 -1.04,1.06667 -2.38667,1.98667 -4.039996,2.76 -1.653333,0.77333 -3.64,1.34667 -5.96,1.72 l -1.72,-2.68 c 2.426667,-0.24 4.506667,-0.8 6.24,-1.68 1.733326,-0.88 3.079996,-2 4.039996,-3.36 0.96,-1.36 1.44,-2.90667 1.44,-4.64 0,-1.30667 -0.36,-2.50667 -1.08,-3.6 -0.72,-1.09333 -1.77333,-1.97333 -3.159996,-2.64 -1.36,-0.69333 -3.04,-1.04 -5.04,-1.04 -1.68,0 -3.24,0.2 -4.68,0.6 -1.413333,0.4 -2.016315,0.588633 -3.029648,1.041963 z"
-       id="path2566"
+       style="font-size:40px;line-height:1;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP';white-space:pre;fill:#46c3e1;fill-opacity:1;stroke:none;stroke-width:25.6;stroke-opacity:0.631373"
+       d="m 387.38058,428.50806 c 33.45068,-12.288 76.50701,-24.68675 115.41901,-32.196 39.59468,-7.50924 75.776,-11.264 108.544,-11.264 64.85333,0 120.83197,11.264 167.9359,33.792 47.104,22.528 83.28525,53.248 108.544,92.16 25.94125,38.22925 38.912,81.23725 38.912,129.024 0,36.864 -6.48525,72.02125 -19.456,105.472 -12.288,33.45076 -32.08525,64.17076 -59.392,92.16 -26.624,27.30676 -61.09875,50.85876 -103.4239,70.656 -42.32532,19.79725 -93.184,34.47476 -152.576,44.032 l -44.032,-68.608 c 62.12268,-6.144 115.37068,-20.48 159.744,-43.008 44.37315,-22.528 78.8479,-51.2 103.4239,-86.016 24.576,-34.816 36.864,-74.41075 36.864,-118.784 0,-33.45075 -9.216,-64.17075 -27.648,-92.16 -18.432,-27.98924 -45.39725,-50.51724 -80.8959,-67.584 -34.816,-17.74924 -77.824,-26.624 -129.024,-26.624 -43.008,0 -82.944,5.12 -119.808,15.36 -36.18132,10.24 -51.61766,15.06901 -77.55899,26.67426 z"
+       id="use6385"
        sodipodi:nodetypes="ccsscsccsccsssscsccc" />
   </g>
   <g
@@ -113,26 +114,27 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 5.376837,9.27903 c 9.480372,1.07226 15.043941,0.30788 27.235598,-1.27589"
+       style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 131.03935,242.48737 c 335.38319,16.7536 390.38665,7.96893 705.94682,-33.02424"
        id="path204632"
-       clip-path="url(#clipPath6365)" />
+       clip-path="url(#clipPath21313)"
+       sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 17.303587,2.86189 C 15.01597,17.60162 14.870713,24.25198 18.122289,35.07501"
+       style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 442.51402,61.494408 C 382.7542,446.54299 378.95963,620.27151 463.90113,903.00345"
        id="path201686"
-       clip-path="url(#clipPath6371)" />
+       clip-path="url(#clipPath21319)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 27.693659,12.42929 C 22.393499,32.8015 5.1705074,38.828496 5.68496,28.82533 5.8333438,25.940113 10.771069,19.752129 15.631508,17.970749"
+       style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 705.97041,316.11359 C 566.43872,852.43117 181.69796,966.66633 148.82072,781.50476 131.94281,686.44991 269.19865,497.68697 401.2142,462.63564"
        id="path219876"
-       clip-path="url(#clipPath6377)"
+       clip-path="url(#clipPath21325)"
        sodipodi:nodetypes="csc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 15.631508,17.970749 c 10.50399,-3.8063 15.953057,-0.0083 17.778367,3.126051 3.60064,6.18279 -1.02332,13.77455 -12.082399,15.01743"
+       style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 401.2142,462.63564 c 252.9446,-94.64463 429.37558,-12.8083 466.73302,75.62545 62.20316,147.24933 4.64514,322.21488 -325.21783,391.95869"
        id="path205582"
-       clip-path="url(#clipPath6383)"
+       clip-path="url(#clipPath21331)"
        sodipodi:nodetypes="csc" />
   </g>
 </svg>
