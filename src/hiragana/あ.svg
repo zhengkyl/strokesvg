@@ -25,9 +25,9 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="1"
-     inkscape:cx="566.49997"
-     inkscape:cy="502.49998"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="429.92092"
+     inkscape:cy="440.52752"
      inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="-9"
@@ -40,9 +40,30 @@
      inkscape:snap-bbox="false"
      inkscape:snap-page="false"
      inkscape:snap-midpoints="false"
-     inkscape:object-paths="true" />
+     inkscape:object-paths="false"
+     inkscape:snap-others="true"
+     inkscape:snap-center="true"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-nodes="true" />
   <defs
      id="defs82334">
+    <rect
+       x="0"
+       y="0"
+       width="1226.1231"
+       height="1107.3292"
+       id="rect66777" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect28545"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath21313">
@@ -67,29 +88,62 @@
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath21325">
+       id="clipPath25375">
       <use
          x="0"
          y="0"
          xlink:href="#use6379"
-         id="use21327"
+         id="use25377"
          width="100%"
          height="100%" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath21331">
+       id="clipPath80308">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use6367"
+         id="use80310"
+         width="100%"
+         height="100%" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath80314">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use6373"
+         id="use80316"
+         width="100%"
+         height="100%" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath80322">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use6379"
+         id="use80324"
+         width="100%"
+         height="100%" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath82406">
       <use
          x="0"
          y="0"
          xlink:href="#use6385"
-         id="use21333"
+         id="use82408"
          width="100%"
          height="100%" />
     </clipPath>
   </defs>
   <g
-     id="g21339">
+     id="g80338">
     <path
        d="m 317.45559,217.11206 q 90.112,0 178.176,-5.12 88.064,-5.12 168.96,-15.36 81.92,-10.24 153.5999,-26.624 l 1.024,75.776 q -55.296,9.216 -119.8079,17.408 -63.488,7.168 -130.048,13.312 -66.56,5.12 -131.072,8.192 -64.512,3.072 -121.856,3.072 -21.504,0 -52.224,-1.024 -30.72,-2.048 -61.44,-3.072 -30.72,-2.048 -52.224,-3.072 l -2.048,-76.8 q 18.432,3.072 50.176,6.144 31.744,3.072 64.512,5.12 32.768,2.048 54.272,2.048 z"
        id="use6367"
@@ -115,26 +169,24 @@
      id="layer1">
     <path
        style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 131.03935,242.48737 c 335.38319,16.7536 390.38665,7.96893 705.94682,-33.02424"
-       id="path204632"
-       clip-path="url(#clipPath21313)"
-       sodipodi:nodetypes="cc" />
+       d="m 121.62236,246.07315 325.26911,7.07107 395.97978,-50.91169"
+       id="path79795"
+       clip-path="url(#clipPath80308)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 442.51402,61.494408 C 382.7542,446.54299 378.95963,620.27151 463.90113,903.00345"
-       id="path201686"
-       clip-path="url(#clipPath21319)" />
+       d="M 445.47727,63.639611 407.2935,404.46508 403.05086,637.81032 470.93312,912.16775"
+       id="path80105"
+       clip-path="url(#clipPath80314)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 705.97041,316.11359 C 566.43872,852.43117 181.69796,966.66633 148.82072,781.50476 131.94281,686.44991 269.19865,497.68697 401.2142,462.63564"
-       id="path219876"
-       clip-path="url(#clipPath21325)"
-       sodipodi:nodetypes="csc" />
+       d="M 708.52099,319.61226 609.52604,588.31284 425.67828,799.03066 209.3036,875.39819 135.7645,779.23167 219.2031,576.99913 428.50671,438.4062 714.17785,434.16356 905.09668,564.27121 842.87128,816.00122 560.02857,934.79516"
+       id="path80318"
+       clip-path="url(#clipPath80322)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 401.2142,462.63564 c 252.9446,-94.64463 429.37558,-12.8083 466.73302,75.62545 62.20316,147.24933 4.64514,322.21488 -325.21783,391.95869"
-       id="path205582"
-       clip-path="url(#clipPath21331)"
-       sodipodi:nodetypes="csc" />
+       d="M 126.74833,329.47461 321.29692,539.59564 425.67828,799.03066 209.3036,875.39819 135.7645,779.23167 219.2031,576.99913 428.50671,438.4062 714.17785,434.16356 905.09668,564.27121 842.87128,816.00122 560.02857,934.79516"
+       id="path80220"
+       clip-path="url(#clipPath82406)"
+       sodipodi:nodetypes="ccccccccccc" />
   </g>
 </svg>
