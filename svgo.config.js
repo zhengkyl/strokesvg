@@ -47,7 +47,8 @@ module.exports = {
       params: {
         delim: "",
         prefixClassNames: false,
-        prefix: (_, info) => path.basename(info.path, ".svg"),
+        prefix: (_, info) =>
+          path.basename(info.path, ".svg").codePointAt(0).toString(16),
       },
     },
     {
