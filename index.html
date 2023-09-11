@@ -39,35 +39,202 @@
       async
     ></script>
   </head>
-  <body class="max-w-screen-md mx-auto my-4">
-    <main un-cloak>
-      <h1>StrokeSVG Preview</h1>
+  <body class="max-w-screen-md mx-auto my-4 px-4">
+    <main un-cloak class="flex flex-col gap-4 dark:bg-stone-950">
+      <h1 class="font-bold text-3xl">StrokeSVG Preview</h1>
       <input
         type="text"
-        class="h-10 w-full rounded-md border border-stone-200 bg-white p-2 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:border-stone-800 dark:border-stone-800 dark:bg-stone-950 dark:ring-offset-stone-950 dark:placeholder:text-stone-400 dark:focus-visible:ring-stone-300"
+        class="h-10 w-full rounded-md border border-stone-300 p-2 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:border-stone-800 dark:border-stone-800 dark:ring-offset-stone-950 dark:placeholder:text-stone-400 dark:focus-visible:ring-stone-300"
+        placeholder="Search for character (not working)"
       />
-      <svg id="svgPreview" data-cache="disabled" width="250" height="250"></svg>
-      <div id="wordBank"></div>
+      <div class="flex flex-wrap gap-4">
+        <svg
+          id="previewSvg"
+          class="border border-stone-300 rounded-md min-w-[250px] min-h-[250px] aspect-square flex-1"
+          data-cache="disabled"
+        ></svg>
+        <div class="py-2 flex-1">
+          <h2 id="previewText" class="text-2xl mb-2">
+            Select a character to preview
+          </h2>
+          <button
+            class="px-4 py-2 bg-stone-900 text-stone-50 hover:bg-stone-900/90 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50/90 rounded-md ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
+            onclick="restartAnimation()"
+          >
+            Play
+          </button>
+        </div>
+      </div>
+      <h3 class="font-bold text-2xl">Hiragana</h3>
+      <div
+        id="hiraganaBank"
+        class="text-lg flex flex-wrap gap-x-2 gap-y-4"
+      ></div>
+      <h3 class="font-bold text-2xl">Katakana</h3>
+      <div
+        id="katakanaBank"
+        class="text-lg flex flex-wrap gap-x-2 gap-y-4"
+      ></div>
     </main>
     <script>
-      const hiragana = ["あ", "い", "う", "え", "お"];
+      const kana = [
+        [
+          { hira: "あ", kata: "ア", romaji: ["a"] },
+          { hira: "い", kata: "イ", romaji: ["i"] },
+          { hira: "う", kata: "ウ", romaji: ["u"] },
+          { hira: "え", kata: "エ", romaji: ["e"] },
+          { hira: "お", kata: "オ", romaji: ["o"] },
+        ],
+        [
+          { hira: "か", kata: "カ", romaji: ["ka"] },
+          { hira: "き", kata: "キ", romaji: ["ki"] },
+          { hira: "く", kata: "ク", romaji: ["ku"] },
+          { hira: "け", kata: "ケ", romaji: ["ke"] },
+          { hira: "こ", kata: "コ", romaji: ["ko"] },
+        ],
+        [
+          { hira: "が", kata: "ガ", romaji: ["ga"] },
+          { hira: "ぎ", kata: "ギ", romaji: ["gi"] },
+          { hira: "ぐ", kata: "グ", romaji: ["gu"] },
+          { hira: "げ", kata: "ゲ", romaji: ["ge"] },
+          { hira: "ご", kata: "ゴ", romaji: ["go"] },
+        ],
+        [
+          { hira: "さ", kata: "サ", romaji: ["sa"] },
+          { hira: "し", kata: "シ", romaji: ["shi", "si"] },
+          { hira: "す", kata: "ス", romaji: ["su"] },
+          { hira: "せ", kata: "セ", romaji: ["se"] },
+          { hira: "そ", kata: "ソ", romaji: ["so"] },
+        ],
+        [
+          { hira: "ざ", kata: "ザ", romaji: ["za"] },
+          { hira: "じ", kata: "ジ", romaji: ["ji", "zi"] },
+          { hira: "ず", kata: "ズ", romaji: ["zu"] },
+          { hira: "ぜ", kata: "ゼ", romaji: ["ze"] },
+          { hira: "ぞ", kata: "ゾ", romaji: ["zo"] },
+        ],
+        [
+          { hira: "た", kata: "タ", romaji: ["ta"] },
+          { hira: "ち", kata: "チ", romaji: ["chi", "ti"] },
+          { hira: "つ", kata: "ツ", romaji: ["tsu", "tu"] },
+          { hira: "て", kata: "テ", romaji: ["te"] },
+          { hira: "と", kata: "ト", romaji: ["to"] },
+        ],
+        [
+          { hira: "だ", kata: "ダ", romaji: ["da"] },
+          { hira: "ぢ", kata: "ヂ", romaji: ["ji", "di", "zi"] },
+          { hira: "づ", kata: "ヅ", romaji: ["zu", "du", "zu"] },
+          { hira: "で", kata: "デ", romaji: ["de"] },
+          { hira: "ど", kata: "ド", romaji: ["do"] },
+        ],
+        [
+          { hira: "な", kata: "ナ", romaji: ["na"] },
+          { hira: "に", kata: "ニ", romaji: ["ni"] },
+          { hira: "ぬ", kata: "ヌ", romaji: ["nu"] },
+          { hira: "ね", kata: "ネ", romaji: ["ne"] },
+          { hira: "の", kata: "ノ", romaji: ["no"] },
+        ],
+        [
+          { hira: "は", kata: "ハ", romaji: ["ha"] },
+          { hira: "ひ", kata: "ヒ", romaji: ["hi"] },
+          { hira: "ふ", kata: "フ", romaji: ["fu", "hu"] },
+          { hira: "へ", kata: "ヘ", romaji: ["he"] },
+          { hira: "ほ", kata: "ホ", romaji: ["ho"] },
+        ],
+        [
+          { hira: "ば", kata: "バ", romaji: ["ba"] },
+          { hira: "び", kata: "ビ", romaji: ["bi"] },
+          { hira: "ぶ", kata: "ブ", romaji: ["bu"] },
+          { hira: "べ", kata: "ベ", romaji: ["be"] },
+          { hira: "ぼ", kata: "ボ", romaji: ["bo"] },
+        ],
+        [
+          { hira: "ぱ", kata: "パ", romaji: ["pa"] },
+          { hira: "ぴ", kata: "ピ", romaji: ["pi"] },
+          { hira: "ぷ", kata: "プ", romaji: ["pu"] },
+          { hira: "ぺ", kata: "ペ", romaji: ["pe"] },
+          { hira: "ぽ", kata: "ポ", romaji: ["po"] },
+        ],
+        [
+          { hira: "ま", kata: "マ", romaji: ["ma"] },
+          { hira: "み", kata: "ミ", romaji: ["mi"] },
+          { hira: "む", kata: "ム", romaji: ["mu"] },
+          { hira: "め", kata: "メ", romaji: ["me"] },
+          { hira: "も", kata: "モ", romaji: ["mo"] },
+        ],
+        [
+          { hira: "や", kata: "ヤ", romaji: ["ya"] },
+          {},
+          { hira: "ゆ", kata: "ユ", romaji: ["yu"] },
+          {},
+          { hira: "よ", kata: "ヨ", romaji: ["yo"] },
+        ],
+        [
+          { hira: "ら", kata: "ラ", romaji: ["ra"] },
+          { hira: "り", kata: "リ", romaji: ["ri"] },
+          { hira: "る", kata: "ル", romaji: ["ru"] },
+          { hira: "れ", kata: "レ", romaji: ["re"] },
+          { hira: "ろ", kata: "ロ", romaji: ["ro"] },
+        ],
+        [
+          { hira: "わ", kata: "ワ", romaji: ["wa"] },
+          {},
+          {},
+          {},
+          { hira: "を", kata: "ヲ", romaji: ["o", "wo"] },
+        ],
+        [{ hira: "ん", kata: "ン", romaji: ["n"] }],
+      ];
 
-      const svgPreview = document.getElementById("svgPreview");
-      const wordBank = document.getElementById("wordBank");
+      let previewSvg = document.getElementById("previewSvg");
+      const previewText = document.getElementById("previewText");
+      const hiraganaBank = document.getElementById("hiraganaBank");
+      const katakanaBank = document.getElementById("katakanaBank");
+
+      function restartAnimation() {
+        const clone = previewSvg.cloneNode(true);
+        previewSvg.parentNode.replaceChild(clone, previewSvg);
+        previewSvg = clone;
+      }
+
+      function getTitle(kana) {}
 
       function setPreview(e) {
-        svgPreview.setAttribute(
-          "data-src",
-          `./dist/hiragana/${e.target.innerText}.svg`
-        );
+        if (e.target.id || !e.target.innerText) return;
+
+        const char = e.target.innerText;
+        previewSvg.setAttribute("data-src", `./dist/hiragana/${char}.svg`);
+        previewText.innerText = e.target.title;
       }
 
-      for (const kana of hiragana) {
-        const option = document.createElement("span");
-        option.innerText = kana;
-        option.addEventListener("click", setPreview);
-        wordBank.appendChild(option);
+      function setupBanks(bank, bankEl) {
+        bankEl.addEventListener("click", setPreview);
+
+        for (const col of kana) {
+          const options = document.createElement("div");
+          options.className = "flex flex-col gap-1";
+          for (const info of col) {
+            const kana = info[bank];
+            const option = document.createElement("span");
+            if (kana) {
+              option.innerText = kana;
+              option.className =
+                "border border-stone-300 rounded-md h-10 w-10 inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
+
+              option.title = `${kana} U+${kana.codePointAt(0).toString(16)} ${
+                bank === "hira" ? "HIRAGANA" : "KATAKANA"
+              } ${info.romaji.at(-1)}`.toUpperCase();
+            } else {
+              option.className = "border border-stone-300 rounded-md h-10 w-10";
+            }
+            options.appendChild(option);
+          }
+          bankEl.appendChild(options);
+        }
       }
+
+      setupBanks("hira", hiraganaBank);
+      setupBanks("kata", katakanaBank);
     </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "strokesvg",
   "version": "1.0.0",
   "scripts": {
-    "start": "http-server",
+    "dev": "http-server",
     "build": "svgo --recursive -f ./src -o ./dist"
   },
   "license": "ISC",
