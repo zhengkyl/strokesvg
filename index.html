@@ -5,34 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/dist/hiragana/あ.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StrokeSVG Preview</title>
-    <style>
-      /* https://unocss.dev/integrations/runtime#preventing-fouc */
-      [un-cloak] {
-        display: none;
-      }
-
-      @keyframes s {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-
-      path[clip-path][style^="--i:"] {
-        --time: 0.7s; /* time to draw a "max length stroke" */
-        --gap: 0.7s; /* time between stroke starts */
-        --delay: 0.5s; /* time before first stroke */
-        animation: s var(--time) linear forwards
-          calc(var(--i) * var(--gap) + var(--delay));
-        stroke-dasharray: 3333;
-        stroke-dashoffset: 3333;
-      }
-    </style>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <link rel="stylesheet" href="index.css" />
     <script
       type="text/javascript"
       src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
@@ -42,11 +15,18 @@
   <body class="max-w-screen-md mx-auto my-4 px-4">
     <main un-cloak class="flex flex-col gap-4 dark:bg-stone-950">
       <h1 class="font-bold text-3xl">StrokeSVG Preview</h1>
-      <input
-        type="text"
-        class="h-10 w-full rounded-md border border-stone-300 p-2 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:border-stone-800 dark:border-stone-800 dark:ring-offset-stone-950 dark:placeholder:text-stone-400 dark:focus-visible:ring-stone-300"
-        placeholder="Search for character (not working)"
-      />
+      <div>
+        <input
+          type="text"
+          class="h-10 w-full rounded-md border border-stone-300 py-2 px-3 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:border-stone-800 dark:border-stone-800 dark:ring-offset-stone-950 dark:placeholder:text-stone-400 dark:focus-visible:ring-stone-300"
+          placeholder="Search for character (not working)"
+        />
+        <ul
+          id="searchList"
+          class="border border-stone-300 rounded-md flex flex-col overflow-y-auto max-h-96"
+          role="listbox"
+        ></ul>
+      </div>
       <div class="flex flex-wrap gap-4">
         <svg
           id="previewSvg"
@@ -68,12 +48,12 @@
       <h3 class="font-bold text-2xl">Hiragana</h3>
       <div
         id="hiraganaBank"
-        class="text-lg flex flex-wrap gap-x-2 gap-y-4"
+        class="text-lg flex flex-wrap gap-x-2 gap-y-4 font-['Noto_Sans_JP']"
       ></div>
       <h3 class="font-bold text-2xl">Katakana</h3>
       <div
         id="katakanaBank"
-        class="text-lg flex flex-wrap gap-x-2 gap-y-4"
+        class="text-lg flex flex-wrap gap-x-2 gap-y-4 font-['Noto_Sans_JP']"
       ></div>
     </main>
     <script>
@@ -164,9 +144,9 @@
         ],
         [
           { hira: "や", kata: "ヤ", romaji: ["ya"] },
-          {},
+          null,
           { hira: "ゆ", kata: "ユ", romaji: ["yu"] },
-          {},
+          null,
           { hira: "よ", kata: "ヨ", romaji: ["yo"] },
         ],
         [
@@ -178,26 +158,97 @@
         ],
         [
           { hira: "わ", kata: "ワ", romaji: ["wa"] },
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { hira: "を", kata: "ヲ", romaji: ["o", "wo"] },
         ],
         [{ hira: "ん", kata: "ン", romaji: ["n"] }],
       ];
 
+      const searchList = document.getElementById("searchList");
       let previewSvg = document.getElementById("previewSvg");
       const previewText = document.getElementById("previewText");
       const hiraganaBank = document.getElementById("hiraganaBank");
       const katakanaBank = document.getElementById("katakanaBank");
+
+      function getRelevantKana(input) {
+        const relevant = [];
+        if (input.length === 0) return relevant;
+
+        const testRomaji = /[a-zA-Z]+/.test(input);
+        const testHira = /[ぁ-ゖ]+/.test(input);
+        const testKata = /[ァ-ヶ]+/.test(input);
+
+        for (const col of kana) {
+          for (const info of col) {
+            if (!info) continue;
+
+            if (testHira && input.includes(info.hira)) {
+              relevant.push(info);
+              break;
+            }
+            if (testKata && input.includes(info.kata)) {
+              relevant.push(info);
+              break;
+            }
+            if (testRomaji) {
+              for (const spelling of info.romaji) {
+                if (input.includes(spelling)) {
+                  relevant.push(info);
+                  break;
+                }
+              }
+            }
+          }
+        }
+
+        return relevant;
+      }
+
+      function showSearchResults(input) {
+        getRelevantKana(input).forEach((info, index) => {
+          if (index > 0) {
+            const divider = document.createElement("li");
+            divider.appendChild(document.createElement("hr"));
+            searchList.append(divider);
+          }
+
+          const listItem = document.createElement("li");
+          const charSpan = document.createElement("span");
+          const infoSpan = document.createElement("span");
+
+          infoSpan.innerText = getUnicodeName("hira", info);
+          infoSpan.className = "text-stone-500 dark:text-stone-400";
+
+          charSpan.innerText = info["hira"];
+          charSpan.className = "font-['Noto_Sans_JP'] w-20";
+
+          listItem.id = info["hira"];
+          listItem.role = "option";
+          listItem.className =
+            "h-10 px-3 flex justify-between items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
+          listItem.append(charSpan, infoSpan);
+          searchList.append(listItem);
+        });
+      }
+
+      // showSearchResults("aiueo");
+
+      // searchList["aria-activedescendant"] = kana[0].hira;
+      // searchList.childNodes[0].ariaSelected = "true";
+
+      function getUnicodeName(type, info) {
+        return `U+${info[type].codePointAt(0).toString(16)} ${
+          type === "hira" ? "HIRAGANA" : "KATAKANA"
+        } ${info.romaji.at(-1)}`.toUpperCase();
+      }
 
       function restartAnimation() {
         const clone = previewSvg.cloneNode(true);
         previewSvg.parentNode.replaceChild(clone, previewSvg);
         previewSvg = clone;
       }
-
-      function getTitle(kana) {}
 
       function setPreview(e) {
         if (e.target.id || !e.target.innerText) return;
@@ -214,18 +265,15 @@
           const options = document.createElement("div");
           options.className = "flex flex-col gap-1";
           for (const info of col) {
-            const kana = info[bank];
             const option = document.createElement("span");
-            if (kana) {
-              option.innerText = kana;
-              option.className =
-                "border border-stone-300 rounded-md h-10 w-10 inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
 
-              option.title = `${kana} U+${kana.codePointAt(0).toString(16)} ${
-                bank === "hira" ? "HIRAGANA" : "KATAKANA"
-              } ${info.romaji.at(-1)}`.toUpperCase();
-            } else {
-              option.className = "border border-stone-300 rounded-md h-10 w-10";
+            option.className = "border border-stone-300 rounded-md h-10 w-10";
+            if (info) {
+              option.innerText = info[bank];
+              option.className +=
+                " inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
+
+              option.title = `${info[bank]} ${getUnicodeName(bank, info)}`;
             }
             options.appendChild(option);
           }

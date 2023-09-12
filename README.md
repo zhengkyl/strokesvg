@@ -4,13 +4,15 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on Noto Sa
 
 ## TODO
 
-- [ ] configure svgo
-  - [ ] write plugin
+- [x] configure svgo
+  - [x] write plugin
 - [ ] hiragana
 - [ ] katakana
 - [ ] automate somehow?
   - [ ] how tf did they do it for thousands of characters
 - [ ] website
+  - [ ] search
+  - [x] use same font
 
 ## Alternatives
 

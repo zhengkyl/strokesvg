@@ -2,12 +2,14 @@
   "name": "strokesvg",
   "version": "1.0.0",
   "scripts": {
-    "dev": "http-server",
+    "dev": "unocss index.html --watch -o index.css & http-server",
     "build": "svgo --recursive -f ./src -o ./dist"
   },
   "license": "ISC",
   "devDependencies": {
+    "@unocss/cli": "^0.55.7",
     "http-server": "^14.1.1",
-    "svgo": "^3.0.2"
+    "svgo": "^3.0.2",
+    "unocss": "^0.55.7"
   }
 }
