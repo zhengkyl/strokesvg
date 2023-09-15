@@ -7,7 +7,7 @@
    viewBox="0 0 1024 1024"
    version="2"
    id="svg82337"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="base.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      showgrid="false"
      units="px"
      inkscape:zoom="0.35355339"
-     inkscape:cx="453.96255"
-     inkscape:cy="654.78088"
+     inkscape:cx="834.386"
+     inkscape:cy="354.9676"
      inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="-9"
@@ -44,7 +44,9 @@
      inkscape:snap-center="true"
      inkscape:bbox-nodes="false"
      inkscape:snap-nodes="true"
-     inkscape:snap-grids="false" />
+     inkscape:snap-grids="false"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs82334">
     <rect
@@ -57,12 +59,5 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <text
-       xml:space="preserve"
-       id="text31829"
-       style="font-style:normal;font-weight:normal;font-size:1024px;line-height:1;font-family:sans-serif;white-space:pre;shape-inside:url(#rect31831);fill:#000000;fill-opacity:1;stroke:none"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP'"
-         id="tspan35399">う</tspan></text>
-  </g>
+     id="layer1" />
 </svg>
