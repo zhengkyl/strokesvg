@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>StrokeSVG Helper</name>
+  <id>org.strokesvg.helper</id>
+  <param name="page" type="notebook">
+    <page name="one" gui-text="Text to Shapes">
+      <param name="text" type="string" gui-text="Text:"></param>
+      <param name="fontSize" type="int" min="1" max="1024" gui-text="Font size (px):">1024</param>
+      <param name="fontFamily" type="string" gui-text="Font family:">Noto Sans JP</param>
+    </page>
+    <page name="two" gui-text="Colorize Shapes">
+      <param name="baseColor" type="color" gui-text="Base color:">0xf76d6dff</param>
+    </page>
+    <page name="three" gui-text="Clip to Shapes">
+    </page>
+</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="StrokeSVG"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">helper.py</command>
+  </script>
+</inkscape-extension>
