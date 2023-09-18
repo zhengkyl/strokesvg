@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@iconify-json/fluent':
+    specifier: ^1.1.35
+    version: 1.1.35
   '@unocss/cli':
     specifier: ^0.55.7
     version: 0.55.7
@@ -236,6 +239,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify-json/fluent@1.1.35:
+    resolution: {integrity: sha512-WqrkFv/HtXjrsLfBBICYn6du2s9lPADvN3pO1evqLdEMgfEvaX1fd5x3RVakFeLeivIkKHVLrKAz8JwmfpSq4g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}

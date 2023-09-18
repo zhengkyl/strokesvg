@@ -5,7 +5,6 @@ import {
   presetWind,
   transformerVariantGroup,
 } from "unocss";
-
 export default defineConfig({
   presets: [presetWind(), presetIcons(), presetTypography()],
   transformers: [transformerVariantGroup()],
@@ -35,14 +34,17 @@ export default defineConfig({
     stroke-dashoffset: 0;
   }
 }
-path[clip-path][style^="--i:"] {
+svg {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
+}
+path[clip-path][style^="--i:"] {
   animation: s var(--time) linear forwards
     calc(var(--i) * var(--gap) + var(--delay));
   stroke-dasharray: 3333;
   stroke-dashoffset: 3333;
+  stroke-linecap: round;
 }`,
     },
   ],
