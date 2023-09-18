@@ -8,10 +8,10 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on Noto Sa
   - [x] write plugin
 - [ ] hiragana
 - [ ] katakana
-- [ ] automate somehow?
-  - [ ] how tf did they do it for thousands of characters
-- [ ] website
-  - [ ] search
+- [x] automate somehow?
+  - [x] semi automated with inkscape extension
+- [x] website
+  - [x] search
   - [x] use same font
 
 ## Alternatives
@@ -73,3 +73,30 @@ Some strokes self intersect, like in loops, so they are created from multiple st
 ```sh
 pnpm run build
 ```
+
+### SVG Creation Workflow
+
+Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.strokesvg.helper`.
+
+#### Step 1: Text to shapes
+
+- Create an SVG document with the desired size (1024 x 1024 px).
+- Make a text element with the desired font-family (Noto Sans JP) and font-size (1024px). Ensure the character is placed correctly on the page. In Inkscape, this is done by creating a flow text element with the top left corner snapped to the page's top left corner.
+- Convert the text element to an object (path) and then ungroup and break apart.
+
+#### Step 2: Colorize shapes
+
+- Give each stroke shape a distinct color (for clarity) and place them in stroke order.
+
+#### Step 3: Manually draw stroke paths
+
+- Use default stroke settings, except width is 128px.
+- Draw straight lines that cover each stroke shape.
+- If a stroke unavoidably self-intersects, do the following.
+  - Duplicate the drawn stroke. Adjust the path of the second so that it doesn't self intersect, but remains the same length.
+  - Duplicate the stroke shape too.
+
+#### Step 4: Clip to shapes
+
+- For each stroke, clone the shape and use it as a clip path for the drawn stroke.
+- Make sure the strokes are above the shapes at the end.
