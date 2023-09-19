@@ -52,6 +52,12 @@ module.exports = {
       },
     },
     {
+      name: "addClassesToSVGElement",
+      params: {
+        className: "strokesvg",
+      },
+    },
+    {
       name: "pluginname",
       fn: (root) => {
         const nodes = querySelectorAll(root, "[xlink\\:href]");
@@ -62,11 +68,8 @@ module.exports = {
           }
         }
 
-        const shadowG = querySelector(root, "g:first-of-type");
-        shadowG.attributes.style = "fill:#ccc";
-
         const strokeG = querySelector(root, "g:last-of-type");
-        strokeG.attributes.style = "fill:none;stroke:#000;stroke-width:128";
+        strokeG.attributes.style = "fill:none;stroke-width:128";
 
         let i = 0;
         for (let j = 0; j < strokeG.children.length; j++) {

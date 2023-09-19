@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 1024 1024">
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 1024 1024" class="strokesvg">
   <defs>
     <clipPath id="3054e">
       <use href="#3054a"/>
@@ -13,13 +13,13 @@
       <use href="#3054d"/>
     </clipPath>
   </defs>
-  <g style="fill:#ccc">
+  <g>
     <path id="3054a" d="M222 194q56 6 124 9 70 3 147 3l98-2 95-5q46-3 83-8v84l-81 7-97 5-97 1q-78 0-145-3-66-3-127-9z"/>
     <path id="3054b" d="M263 606q-10 30-15 60-5 28-5 56 0 59 59 96 60 36 183 36 72 0 137-4 65-5 119-14 56-10 95-22l1 88q-37 9-92 18-53 9-118 13-66 5-140 5-103 0-177-23-73-22-112-66t-39-109q0-40 7-75l14-67z"/>
     <path id="3054c" d="M798 79q13 18 28 44 16 24 30 51l26 46-56 26q-15-32-39-73-23-41-45-71Z"/>
     <path id="3054d" d="M910 38q15 19 31 45l32 51q15 25 24 44l-56 25q-16-34-40-73-22-40-45-69Z"/>
   </g>
-  <g style="fill:none;stroke:#000;stroke-width:128">
+  <g style="fill:none;stroke-width:128">
     <path style="--i:0" d="m213 236 563 4" clip-path="url(#3054e)"/>
     <path style="--i:1" d="m211 591-22 155 80 128 220 34 357-51" clip-path="url(#3054f)"/>
     <path style="--i:2" d="m772 83 72 160" clip-path="url(#3054g)"/>

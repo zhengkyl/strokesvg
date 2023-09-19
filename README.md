@@ -13,6 +13,7 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on Noto Sa
 - [x] website
   - [x] search
   - [x] use same font
+  - [ ] usable offline -> replace svg loader lib
 
 ## Alternatives
 
@@ -38,13 +39,22 @@ These files should NOT be used as is.
 Here is some CSS to have the stroke animation start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, this usually isn't very useful by itself, since it only runs once on page load.
 
 ```css
+/* Shape color */
+.strokesvg > g:first-of-type {
+  fill: #ccc;
+}
+/* Stroke color */
+.strokesvg > g:last-of-type {
+  stroke: #000;
+}
+
 @keyframes s {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-path[clip-path][style^="--i:"] {
+.strokesvg > g:last-of-type > path {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
