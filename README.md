@@ -40,21 +40,14 @@ Here is some CSS to have the stroke animation start on page load. This is loosel
 
 ```css
 /* Shape color */
-.strokesvg > g:first-of-type {
+svg[data-strokesvg] > g:first-of-type {
   fill: #ccc;
 }
 /* Stroke color */
-.strokesvg > g:last-of-type {
+svg[data-strokesvg] > g:last-of-type {
   stroke: #000;
 }
-
-@keyframes s {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.strokesvg > g:last-of-type > path {
+svg[data-strokesvg] > g:last-of-type > path {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
@@ -63,6 +56,13 @@ Here is some CSS to have the stroke animation start on page load. This is loosel
     );
   stroke-dasharray: 3333;
   stroke-dashoffset: 3333;
+  stroke-linecap: round; /* makes curves animate smoother */
+}
+
+@keyframes s {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 ```
 

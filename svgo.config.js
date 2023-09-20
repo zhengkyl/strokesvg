@@ -52,14 +52,11 @@ module.exports = {
       },
     },
     {
-      name: "addClassesToSVGElement",
-      params: {
-        className: "strokesvg",
-      },
-    },
-    {
       name: "pluginname",
-      fn: (root) => {
+      fn: (root, params, info) => {
+        const svg = querySelector(root, "svg");
+        svg.attributes["data-strokesvg"] = path.basename(info.path, ".svg");
+
         const nodes = querySelectorAll(root, "[xlink\\:href]");
         for (const node of nodes) {
           if (node.attributes["xlink:href"]) {

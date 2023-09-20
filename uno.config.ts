@@ -34,12 +34,16 @@ export default defineConfig({
     stroke-dashoffset: 0;
   }
 }
-svg {
+svg[data-strokesvg] > g:first-of-type {
+  fill: #ccc;
+}
+svg[data-strokesvg] > g:last-of-type {
+  stroke: #000;
+}
+svg[data-strokesvg] > g:last-of-type > path {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
-}
-path[clip-path][style^="--i:"] {
   animation: s var(--time) linear forwards
     calc(var(--i) * var(--gap) + var(--delay));
   stroke-dasharray: 3333;
