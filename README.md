@@ -34,9 +34,9 @@ This is where the raw unoptimized svg files are stored and directly edited using
 
 These files should NOT be used as is.
 
-## Animating
+## Usage
 
-Here is some CSS to have the stroke animation start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, this usually isn't very useful by itself, since it only runs once on page load.
+The SVGs have no color styling so you must provide a fill and stroke color.
 
 ```css
 /* Shape color */
@@ -47,6 +47,11 @@ svg[data-strokesvg] > g:first-of-type {
 svg[data-strokesvg] > g:last-of-type {
   stroke: #000;
 }
+```
+
+Here is some CSS to have the stroke animation automatically start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, by itself, this only runs on page load.
+
+```css
 svg[data-strokesvg] > g:last-of-type > path {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
@@ -66,9 +71,9 @@ svg[data-strokesvg] > g:last-of-type > path {
 }
 ```
 
-You can add javascript to restart the animation programmatically, but you can also just control the `stroke-dasharray` and `stroke-dashoffset` properties without using the CSS animation.
+You can add javascript to restart the CSS animation programmatically, but you can also just control the `stroke-dasharray` and `stroke-dashoffset` properties without using the CSS animation.
 
-See [monodown](https://github.com/zhengkyl/monodown) for a bad example.
+See `strokeAnimator` in [`index.js`](./index.js) for an overengineered example. Feel free to use it.
 
 ## Format
 
