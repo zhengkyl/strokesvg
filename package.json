@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "unocss index.html --watch -o index.css & http-server",
-    "build": "svgo --recursive -f ./src -o ./dist"
+    "build": "svgo --recursive -f ./src/hiragana -o ./dist/hiragana"
   },
   "license": "ISC",
   "devDependencies": {

@@ -1,6 +1,6 @@
 export function strokeAnimator(
   svgEl,
-  options = { time: 300, gap: 400, delay: 300 }
+  options = { time: 3000, gap: 400, delay: 300 }
 ) {
   const strokes = [];
 
