@@ -65,28 +65,16 @@ module.exports = {
           }
         }
 
-        const strokeG = querySelector(root, "g:last-of-type");
+        const strokeG = querySelector(root, "svg > g:last-of-type");
         strokeG.attributes.style = "fill:none;stroke-width:128";
 
-        let i = 0;
-        for (let j = 0; j < strokeG.children.length; j++) {
-          // If prefix/suffix overlap, then its a part of the same stroke
-          if (
-            j > 0 &&
-            strokeG.children[j].attributes.d.slice(0, 16) !==
-              strokeG.children[j - 1].attributes.d.slice(0, 16) &&
-            strokeG.children[j].attributes.d.slice(-16) !==
-              strokeG.children[j - 1].attributes.d.slice(-16)
-          ) {
-            i++;
-          }
-
+        for (let i = 0; i < strokeG.children.length; i++) {
           // Create a new object so style is first attribute and easy to see
-          strokeG.children[j].attributes = Object.assign(
+          strokeG.children[i].attributes = Object.assign(
             {
               style: `--i:${i}`,
             },
-            strokeG.children[j].attributes
+            strokeG.children[i].attributes
           );
         }
 

@@ -5,20 +5,18 @@ export function strokeAnimator(
   const strokes = [];
 
   svgEl
-    .querySelectorAll("[data-strokesvg] > g:last-of-type > path")
+    .querySelectorAll("[data-strokesvg] > g:last-of-type > *")
     .forEach((e) => {
-      const index = parseInt(getComputedStyle(e).getPropertyValue("--i"));
-      if (index == strokes.length) {
-        strokes.push([]);
-      }
-      strokes[index].push(e);
+      strokes.push(e);
     });
 
-  strokes.forEach((strokePaths) => {
-    strokePaths.forEach((path) => {
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = length.toString();
-    });
+  strokes.forEach((stroke) => {
+    const length =
+      stroke instanceof SVGGElement
+        ? stroke.children[0].getTotalLength()
+        : stroke.getTotalLength();
+
+    stroke.style.strokeDasharray = length.toString();
   });
 
   let strokeIndex = strokes.length;
@@ -26,10 +24,8 @@ export function strokeAnimator(
   let timeoutId = null;
 
   function skipOne() {
-    const strokePaths = strokes[strokeIndex];
-    strokePaths.forEach((path) => {
-      path.style.strokeDashoffset = "0";
-    });
+    const stroke = strokes[strokeIndex];
+    stroke.style.strokeDashoffset = "0";
     strokeIndex++;
   }
 
@@ -39,18 +35,15 @@ export function strokeAnimator(
     if (strokeIndex === strokes.length) {
       strokeIndex--;
     } else if (
-      strokes[strokeIndex][0].style.strokeDashoffset ===
-      strokes[strokeIndex][0].style.strokeDasharray
+      strokes[strokeIndex].style.strokeDashoffset ===
+      strokes[strokeIndex].style.strokeDasharray
     ) {
       if (strokeIndex === 0) return;
       strokeIndex--;
     }
 
-    const strokePaths = strokes[strokeIndex];
-
-    strokePaths.forEach((path) => {
-      path.style.strokeDashoffset = path.style.strokeDasharray;
-    });
+    const stroke = strokes[strokeIndex];
+    stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
   }
 
   function next() {
@@ -102,10 +95,8 @@ export function strokeAnimator(
   }
 
   function clearStrokes() {
-    strokes.forEach((strokePaths) => {
-      strokePaths.forEach((path) => {
-        path.style.strokeDashoffset = path.style.strokeDasharray;
-      });
+    strokes.forEach((stroke) => {
+      stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
     });
     strokeIndex = 0;
   }
@@ -114,9 +105,9 @@ export function strokeAnimator(
   let currPrevTime;
 
   function startNextStroke(timeout) {
-    const strokePaths = strokes[strokeIndex];
+    const stroke = strokes[strokeIndex];
 
-    currOffset = parseInt(strokePaths[0].style.strokeDashoffset);
+    currOffset = parseInt(stroke.style.strokeDashoffset);
 
     timeoutId = setTimeout(() => {
       timeoutId = null;
@@ -129,14 +120,12 @@ export function strokeAnimator(
   const speed = scale / options.time;
 
   function pathFrame(time) {
-    const strokePaths = strokes[strokeIndex];
+    const stroke = strokes[strokeIndex];
 
     currOffset = Math.max(currOffset - speed * (time - currPrevTime), 0);
     currPrevTime = time;
 
-    strokePaths.forEach((path) => {
-      path.style.strokeDashoffset = currOffset.toString();
-    });
+    stroke.style.strokeDashoffset = currOffset.toString();
 
     if (currOffset === 0) {
       requestFrameId = null;

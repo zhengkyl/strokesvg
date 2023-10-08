@@ -2,7 +2,7 @@
   "name": "strokesvg",
   "version": "1.0.0",
   "scripts": {
-    "dev": "unocss index.html --watch -o index.css & http-server",
+    "dev": "unocss index.html --watch -m -o index.css & http-server",
     "build": "svgo --recursive -f ./src/hiragana -o ./dist/hiragana"
   },
   "license": "ISC",

@@ -6,7 +6,8 @@
     <page name="one" gui-text="Text to Shapes">
       <param name="text" type="string" gui-text="Text:"></param>
       <param name="fontSize" type="int" min="1" max="1024" gui-text="Font size (px):">1024</param>
-      <param name="fontFamily" type="string" gui-text="Font family:">Noto Sans JP</param>
+      <param name="fontFamily" type="string" gui-text="Font family:">Klee One</param>
+      <param name="fontWeight" type="int" min="300" max="900" gui-text="Font weight:">600</param>
     </page>
     <page name="two" gui-text="Colorize Shapes">
       <param name="baseColor" type="color" gui-text="Base color:">0xf76d6dff</param>

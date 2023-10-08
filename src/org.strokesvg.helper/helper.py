@@ -13,6 +13,7 @@ class HelperEffectExtension(inkex.EffectExtension):
         pars.add_argument("--page", type=str, help="page representing svg creation step")
         pars.add_argument("--text", type=str, help="text to convert to shapes")
         pars.add_argument("--fontSize", type=str, help="text font size")
+        pars.add_argument("--fontWeight", type=int, help="text font weight")
         pars.add_argument("--fontFamily", type=str, help="text font family")
         pars.add_argument("--baseColor", type=str, help="base for all other colors")
 
@@ -36,7 +37,7 @@ class HelperEffectExtension(inkex.EffectExtension):
         text_root.style = {
             "font-size": "{}px".format(self.options.fontSize),
             "font-style": "normal",
-            "font-weight": "normal",
+            "font-weight": self.options.fontWeight,
             "line-height": 1,
             "fill": "#000000",
             "fill-opacity": 1,
@@ -69,7 +70,8 @@ class HelperEffectExtension(inkex.EffectExtension):
                 self.document = doc
 
     def colorizeShapes(self):
-        paths = self.document.xpath('//svg:g/svg:path', namespaces=inkex.NSS)
+        # :root > svg > g path
+        paths = self.document.xpath('/svg:svg/svg:g//svg:path', namespaces=inkex.NSS)
         if not len(paths):
             inkex.errormsg("Can't find paths to colorize. Are they in a group?")
             return
@@ -90,8 +92,9 @@ class HelperEffectExtension(inkex.EffectExtension):
             nextHue = baseColor.hue + hueDiff
     
     def clipToShapes(self):
-        shapes = self.document.xpath('//svg:g[1]/svg:path', namespaces=inkex.NSS)
-        strokes = self.document.xpath('//svg:g[2]/svg:path', namespaces=inkex.NSS)
+        # :root > svg > g[i] path
+        shapes = self.document.xpath('/svg:svg/svg:g[1]//svg:path', namespaces=inkex.NSS)
+        strokes = self.document.xpath('/svg:svg/svg:g[2]//svg:path', namespaces=inkex.NSS)
 
         if not len(strokes):
             inkex.errormsg("No strokes found. Are they in a group?")

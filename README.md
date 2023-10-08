@@ -1,6 +1,6 @@
 # strokesvg
 
-WIP SVGs with animatable strokes for Japanese hiragana/katakana based on Noto Sans Japanese.
+WIP SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee One](https://fonts.google.com/specimen/Klee+One).
 
 ## TODO
 
@@ -52,7 +52,7 @@ svg[data-strokesvg] > g:last-of-type {
 Here is some CSS to have the stroke animation automatically start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, by itself, this only runs on page load.
 
 ```css
-svg[data-strokesvg] > g:last-of-type > path {
+svg[data-strokesvg] > g:last-of-type > * {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
@@ -81,7 +81,7 @@ The first `<g>` element contains `<path>` elements representing shadows for each
 
 The second `<g>` element contains `<path>` elements representing each stroke. These can be animated using the `stroke-dasharray` and `stroke-dashoffset` css properties. The order/index is represented by the `--i` css variable.
 
-Some strokes self intersect, like in loops, so they are created from multiple stroke "shadows" and corresponding strokes so that the clipping works correctly. In these cases, parts of the same stroke have the same index.
+Some strokes self intersect, like in loops, so they are created from multiple stroke "shadows" and corresponding strokes so that the clipping works correctly. In these cases, parts of the same stroke are grouped together.
 
 ## Generating Optimized SVGs
 
@@ -96,12 +96,12 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 #### Step 1: Text to shapes
 
 - Create an SVG document with the desired size (1024 x 1024 px).
-- Make a text element with the desired font-family (Noto Sans JP) and font-size (1024px). Ensure the character is placed correctly on the page. In Inkscape, this is done by creating a flow text element with the top left corner snapped to the page's top left corner.
-- Convert the text element to an object (path) and then ungroup and break apart.
+- Make a text element with the desired font-family (Klee One) and font-size (1024px). Ensure the character is placed correctly on the page. In Inkscape, this is done by creating a flow text element with the top left corner snapped to the page's top left corner.
+- Convert the text element to an object (path) and then separate the shape into stroke shapes.
 
 #### Step 2: Colorize shapes
 
-- Give each stroke shape a distinct color (for clarity) and place them in stroke order.
+- Place strokes in stroke order, then give each stroke shape a distinct color (for clarity).
 
 #### Step 3: Manually draw stroke paths
 
