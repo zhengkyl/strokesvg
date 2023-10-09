@@ -66,7 +66,8 @@ module.exports = {
         }
 
         const strokeG = querySelector(root, "svg > g:last-of-type");
-        strokeG.attributes.style = "fill:none;stroke-width:128";
+        strokeG.attributes.style =
+          "fill:none;stroke-width:128;stroke-linecap:round";
 
         for (let i = 0; i < strokeG.children.length; i++) {
           // Create a new object so style is first attribute and easy to see

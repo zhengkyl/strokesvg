@@ -24,11 +24,11 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="832.97179"
-     inkscape:cy="352.13918"
+     inkscape:zoom="0.5"
+     inkscape:cx="499"
+     inkscape:cy="463"
      inkscape:window-width="1920"
-     inkscape:window-height="1111"
+     inkscape:window-height="1171"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -49,8 +49,4 @@
      inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs82334" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1" />
 </svg>

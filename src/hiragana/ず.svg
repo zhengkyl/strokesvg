@@ -26,14 +26,14 @@
      showgrid="false"
      units="px"
      inkscape:zoom="0.5"
-     inkscape:cx="354"
-     inkscape:cy="649"
+     inkscape:cx="359"
+     inkscape:cy="411"
      inkscape:window-width="1920"
      inkscape:window-height="1171"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg82337"
+     inkscape:current-layer="g11"
      viewbox-width="10.5832"
      scale-x="0.26458"
      inkscape:snap-global="true"
@@ -80,6 +80,36 @@
          id="clone85"
          xlink:href="#flowRoot1" />
     </clipPath>
+    <clipPath
+       id="clipPath5601">
+      <use
+         id="clone9471"
+         xlink:href="#text4" />
+    </clipPath>
+    <clipPath
+       id="clipPath1574">
+      <use
+         id="clone5801"
+         xlink:href="#path5" />
+    </clipPath>
+    <clipPath
+       id="clipPath7763">
+      <use
+         id="clone5833"
+         xlink:href="#path6" />
+    </clipPath>
+    <clipPath
+       id="clipPath5261">
+      <use
+         id="clone3181"
+         xlink:href="#path1" />
+    </clipPath>
+    <clipPath
+       id="clipPath244">
+      <use
+         id="clone4092"
+         xlink:href="#flowRoot1" />
+    </clipPath>
   </defs>
   <g
      id="g1">
@@ -112,39 +142,39 @@
        id="flowRoot1" />
   </g>
   <g
-     id="g11"
-     clip-path="none"
-     transform="translate(1.3765152e-6,2.3025498e-5)">
+     id="g11">
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 112,375 926,270"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 45.531962,382.07107 1005.196,262.92893"
        id="path10"
        sodipodi:nodetypes="cc"
-       clip-path="url(#clipPath8553)" />
+       clip-path="url(#clipPath5601)" />
     <g
        id="g2">
       <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13401.6;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 563,95 c 0,0 57.22045,449.53803 37.25126,496.69848 -28.22109,66.64864 -73.8838,77.69589 -134.87831,61.39006 -36.19022,-17.68014 -36.08006,-104.7558 -36.08006,-104.7558 0,0 22.49792,-112.3187 116.70711,-83.83274 94.20919,28.48596 61.06037,177.68793 6,279.5 -58.59374,108.34562 -187,244 -187,244"
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13401.6;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 560.17157,29.946176 c 0,0 60.04888,514.591854 40.07969,561.752304 -28.22109,66.64864 -73.8838,77.69589 -134.87831,61.39006 -36.19022,-17.68014 -36.08006,-104.7558 -36.08006,-104.7558 0,0 22.49792,-112.3187 116.70711,-83.83274 94.20919,28.48596 61.06037,177.68793 6,279.5 -58.59374,108.34562 -243.56854,290.669 -243.56854,290.669"
          id="path11"
          sodipodi:nodetypes="cssczsc"
-         clip-path="url(#clipPath8230)" />
+         clip-path="url(#clipPath1574)" />
       <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13401.6;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 277.26895,995.8558 c 0,0 -38.90007,-451.49242 -17.03038,-497.80218 30.90694,-65.4464 76.98097,-74.6284 137.26226,-55.8567 35.44163,19.13661 31.79206,106.13582 31.79206,106.13582 0,0 22.49792,-112.3187 116.70711,-83.83274 94.20919,28.48596 61.06037,177.68793 6,279.5 -58.59374,108.34562 -187,244 -187,244"
-         id="path1-2"
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13401.6;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 248.20528,1051.3846 c 0,0 -9.29169,-518.00034 15.20642,-562.97499 34.62149,-63.55961 81.14751,-70.07531 140.24881,-47.86615 34.28181,21.1442 25.63238,107.78928 25.63238,107.78928 0,0 22.49792,-112.3187 116.70711,-83.83274 94.20919,28.48596 61.06037,177.68793 6,279.5 -58.59374,108.34562 -243.56854,290.669 -243.56854,290.669"
+         id="path1-5"
          sodipodi:nodetypes="cssczsc"
-         clip-path="url(#clipPath2258)" />
+         clip-path="url(#clipPath7763)" />
     </g>
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 742.46212,89.095455 867.62002,228.39549"
-       id="path2"
-       clip-path="url(#clipPath1254)" />
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 694,48 918,281"
+       id="path4"
+       sodipodi:nodetypes="cc"
+       clip-path="url(#clipPath5261)" />
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 830.85047,58.689863 965.20076,193.04015"
-       id="path3"
-       clip-path="url(#clipPath326)" />
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 783,0 233,246"
+       id="path7"
+       sodipodi:nodetypes="cc"
+       clip-path="url(#clipPath244)" />
   </g>
 </svg>
