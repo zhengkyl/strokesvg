@@ -1,6 +1,6 @@
 export function strokeAnimator(
   svgEl,
-  options = { time: 3000, gap: 400, delay: 300 }
+  { time = 3000, gap = 400, delay = 300, progressCallback = () => {} } = {}
 ) {
   const strokes = [];
 
@@ -10,14 +10,20 @@ export function strokeAnimator(
       strokes.push(e);
     });
 
-  strokes.forEach((stroke) => {
+  const strokeLengthsPrefixSum = [0];
+
+  strokes.forEach((stroke, i) => {
     const length =
       stroke instanceof SVGGElement
         ? stroke.children[0].getTotalLength()
         : stroke.getTotalLength();
 
+    strokeLengthsPrefixSum.push(strokeLengthsPrefixSum[i] + length);
+
     stroke.style.strokeDasharray = length.toString();
   });
+
+  const totalStrokeLength = strokeLengthsPrefixSum[strokes.length];
 
   let strokeIndex = strokes.length;
   let requestFrameId = null;
@@ -27,6 +33,8 @@ export function strokeAnimator(
     const stroke = strokes[strokeIndex];
     stroke.style.strokeDashoffset = "0";
     strokeIndex++;
+
+    progressCallback(strokeLengthsPrefixSum[strokeIndex] / totalStrokeLength);
   }
 
   function prev() {
@@ -44,6 +52,8 @@ export function strokeAnimator(
 
     const stroke = strokes[strokeIndex];
     stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
+
+    progressCallback(strokeLengthsPrefixSum[strokeIndex] / totalStrokeLength);
   }
 
   function next() {
@@ -79,7 +89,7 @@ export function strokeAnimator(
       // stop();
       // skipOne();
       // if (strokeIndex < strokes.length) {
-      //   startNextStroke(options.delay);
+      //   startNextStroke(delay);
       // }
       return;
     }
@@ -87,7 +97,7 @@ export function strokeAnimator(
     if (strokeIndex === strokes.length) {
       // state = not started
       clearStrokes();
-      startNextStroke(options.delay);
+      startNextStroke(delay);
     } else {
       // state = stopped
       startNextStroke(0);
@@ -99,6 +109,9 @@ export function strokeAnimator(
       stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
     });
     strokeIndex = 0;
+
+    // equivalent to progressCallback(strokeLengthsPrefixSum[strokeIndex] / totalStrokeLength);
+    progressCallback(0);
   }
 
   let currOffset;
@@ -107,7 +120,7 @@ export function strokeAnimator(
   function startNextStroke(timeout) {
     const stroke = strokes[strokeIndex];
 
-    currOffset = parseInt(stroke.style.strokeDashoffset);
+    currOffset = parseFloat(stroke.style.strokeDashoffset);
 
     timeoutId = setTimeout(() => {
       timeoutId = null;
@@ -117,7 +130,7 @@ export function strokeAnimator(
   }
 
   const scale = svgEl.viewBox.baseVal.width;
-  const speed = scale / options.time;
+  const speed = scale / time;
 
   function pathFrame(time) {
     const stroke = strokes[strokeIndex];
@@ -127,13 +140,47 @@ export function strokeAnimator(
 
     stroke.style.strokeDashoffset = currOffset.toString();
 
+    progressCallback(
+      (strokeLengthsPrefixSum[strokeIndex + 1] - currOffset) / totalStrokeLength
+    );
+
     if (currOffset === 0) {
       requestFrameId = null;
       strokeIndex++;
-      if (strokeIndex < strokes.length) startNextStroke(options.gap);
+      if (strokeIndex < strokes.length) startNextStroke(gap);
     } else {
       requestFrameId = requestAnimationFrame(pathFrame);
     }
+  }
+
+  function setProgress(t) {
+    stop();
+
+    const strokeProgress = t * totalStrokeLength;
+
+    if (strokeIndex === strokes.length) strokeIndex--;
+
+    let lowerBound = strokeLengthsPrefixSum[strokeIndex];
+    while (lowerBound > strokeProgress) {
+      const stroke = strokes[strokeIndex];
+      stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
+
+      strokeIndex--;
+      lowerBound = strokeLengthsPrefixSum[strokeIndex];
+    }
+
+    let upperBound = strokeLengthsPrefixSum[strokeIndex + 1];
+    while (upperBound <= strokeProgress) {
+      const stroke = strokes[strokeIndex];
+      stroke.style.strokeDashoffset = (0).toString();
+
+      strokeIndex++;
+      if (strokeIndex === strokes.length) return;
+      upperBound = strokeLengthsPrefixSum[strokeIndex + 1];
+    }
+
+    const stroke = strokes[strokeIndex];
+    stroke.style.strokeDashoffset = (upperBound - strokeProgress).toString();
   }
 
   return {
@@ -142,5 +189,6 @@ export function strokeAnimator(
     toggle,
     next,
     prev,
+    setProgress,
   };
 }

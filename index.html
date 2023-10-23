@@ -39,18 +39,32 @@
           <h2 id="previewText" class="text-2xl mb-2 text-center">
             No character selected
           </h2>
+          <input
+            id="progressSlider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+            autocomplete="off"
+            class="cursor-pointer w-full"
+            disabled
+          />
           <div id="controls" class="flex gap-2 justify-center">
             <button
+              disabled
               class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
               <div class="i-fluent:rewind-16-regular text-4xl"></div>
             </button>
             <button
+              disabled
               class="px-4 py-4 bg-stone-900 text-stone-50 hover:bg-stone-900/90 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50/90 rounded-md ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
               <div class="i-fluent:video-play-pause-20-filled text-4xl"></div>
             </button>
             <button
+              disabled
               class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
               <div class="i-fluent:fast-forward-16-regular text-4xl"></div>
@@ -351,6 +365,10 @@
       }
 
       const controls = document.getElementById("controls").children;
+      const progressSlider = document.getElementById("progressSlider");
+      progressSlider.addEventListener("input", (e) => {
+        animator.setProgress(parseFloat(e.target.value));
+      });
 
       let animator;
 
@@ -359,11 +377,22 @@
       controls[2].addEventListener("click", () => animator.next());
 
       window.addEventListener("iconload", () => {
-        animator = strokeAnimator(previewSvg);
+        animator = strokeAnimator(previewSvg, {
+          progressCallback: (t) => (progressSlider.value = t),
+        });
+        progressSlider.removeAttribute("disabled");
+        controls[0].removeAttribute("disabled", false);
+        controls[1].removeAttribute("disabled", false);
+        controls[2].removeAttribute("disabled", false);
       });
 
       function setPreview(char, title) {
-        previewSvg.setAttribute("data-src", `./dist/hiragana/${char}.svg`);
+        const fileSrc = `./dist/hiragana/${char}.svg`;
+        if (fileSrc === previewSvg.getAttribute("data-src")) return;
+        if (animator) animator.stop();
+        progressSlider.value = 1;
+
+        previewSvg.setAttribute("data-src", fileSrc);
         previewText.textContent = title;
       }
 
