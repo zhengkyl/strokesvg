@@ -25,15 +25,15 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="0.43505859"
-     inkscape:cx="364.31874"
-     inkscape:cy="584.97868"
+     inkscape:zoom="0.61526576"
+     inkscape:cx="584.30035"
+     inkscape:cy="688.32044"
      inkscape:window-width="1920"
-     inkscape:window-height="1171"
+     inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g6"
+     inkscape:current-layer="svg82337"
      viewbox-width="10.5832"
      scale-x="0.26458"
      inkscape:snap-global="true"
@@ -51,27 +51,27 @@
   <defs
      id="defs82334">
     <clipPath
-       id="clipPath9432">
+       id="clipPath3559">
       <use
-         id="clone7445"
+         id="clone9766"
          xlink:href="#flowRoot1" />
     </clipPath>
     <clipPath
-       id="clipPath2442">
+       id="clipPath721">
       <use
-         id="clone9430"
+         id="clone6578"
          xlink:href="#path2" />
     </clipPath>
     <clipPath
-       id="clipPath6964">
+       id="clipPath6244">
       <use
-         id="clone234"
+         id="clone500"
          xlink:href="#path3" />
     </clipPath>
     <clipPath
-       id="clipPath3504">
+       id="clipPath438">
       <use
-         id="clone142"
+         id="clone9521"
          xlink:href="#path1" />
     </clipPath>
   </defs>
@@ -104,30 +104,30 @@
      id="g6">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 84.852812,444.06305 660.43774,312.5412"
+       d="M 84.852812,444.06305 540.91361,347.01931"
        id="path5"
        sodipodi:nodetypes="cc"
-       clip-path="url(#clipPath9432)" />
+       clip-path="url(#clipPath3559)" />
     <g
        id="g9">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 360.62446,56.568543 371.93817,908.63221 174.92745,820.70834 c 0,0 321.88114,-308.9794 530.05801,-244.41631 173.64398,53.8532 150.42467,191.98571 74.24621,250.3158 -151.06416,115.6703 -377.35029,-31.67262 -377.35029,-31.67262"
+         d="M 360.62446,56.568543 371.93817,908.63221 174.92745,820.70834 c 0,0 321.88114,-308.9794 530.05801,-244.41631 173.64398,53.8532 150.42467,191.98571 74.24621,250.3158 C 628.16751,942.27813 512.40273,840.444 512.40273,840.444"
          id="path6"
          sodipodi:nodetypes="cccssc"
-         clip-path="url(#clipPath2442)" />
+         clip-path="url(#clipPath721)" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 1125.6762,1306.1489 371.93817,908.63221 174.92745,820.70834 c 0,0 321.88114,-308.9794 530.05801,-244.41631 173.64398,53.8532 150.42467,191.98571 74.24621,250.3158 -151.06416,115.6703 -377.35029,-31.67262 -377.35029,-31.67262"
+         d="M 1125.6762,1306.1489 371.93817,908.63221 174.92745,820.70834 c 0,0 321.88114,-308.9794 530.05801,-244.41631 173.64398,53.8532 150.42467,191.98571 74.24621,250.3158 C 628.16751,942.27813 512.40273,840.444 512.40273,840.444"
          id="path8"
          sodipodi:nodetypes="cccssc"
-         clip-path="url(#clipPath6964)" />
+         clip-path="url(#clipPath6244)" />
     </g>
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 591,223 944,448"
+       d="M 591,223 834.8193,374.44669"
        id="path9"
        sodipodi:nodetypes="cc"
-       clip-path="url(#clipPath3504)" />
+       clip-path="url(#clipPath438)" />
   </g>
 </svg>

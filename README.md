@@ -115,3 +115,11 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 
 - For each stroke, clone the shape and use it as a clip path for the drawn stroke.
 - Make sure the strokes are above the shapes at the end.
+
+### Misc Mysteries
+
+- `performance.now()` can return an earlier timestamp than a `requestAnimationFrame` called after it.
+- `stroke-dasharray` and `stroke-dashoffset` act weird
+  - setting `stroke-dashoffset` equal to `stroke-dasharray` triggers some superposition edge case where the stroke should? be invisible but is visible? or maybe the reverse. I address this by adding an small epsilon.
+  - in SOME situations if a stroke with `stroke-linecap: round` is offset, it won't start rendering at all until it suddenly pops into view, no matter what offset I choose
+    - I know this happens if I place the strokes so that they are contained within `stroke-linecap: butt`

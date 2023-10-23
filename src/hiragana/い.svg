@@ -26,10 +26,10 @@
      showgrid="false"
      units="px"
      inkscape:zoom="0.5"
-     inkscape:cx="567"
-     inkscape:cy="437"
+     inkscape:cx="369"
+     inkscape:cy="565"
      inkscape:window-width="1920"
-     inkscape:window-height="1171"
+     inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -51,15 +51,15 @@
   <defs
      id="defs82334">
     <clipPath
-       id="clipPath7945">
+       id="clipPath6715">
       <use
-         id="clone1915"
+         id="clone5183"
          xlink:href="#flowRoot1" />
     </clipPath>
     <clipPath
-       id="clipPath4825">
+       id="clipPath8681">
       <use
-         id="clone3437"
+         id="clone6172"
          xlink:href="#path1" />
     </clipPath>
   </defs>
@@ -79,15 +79,15 @@
      clip-path="none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:128;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 185.26198,173.94827 c -1.43755,257.46789 82.17243,697.53067 147.44827,667.28089 l 149.9325,-327.60782"
+       d="m 185.26198,173.94827 c -1.43755,257.46789 82.17243,697.53067 147.44827,667.28089 L 431.728,614.68"
        id="path2"
        sodipodi:nodetypes="ccc"
-       clip-path="url(#clipPath7945)" />
+       clip-path="url(#clipPath6715)" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 656.19509,258.80109 928.78475,715.23851"
+       d="M 656.19509,258.80109 873.78475,623.23851"
        id="path3"
        sodipodi:nodetypes="cc"
-       clip-path="url(#clipPath4825)" />
+       clip-path="url(#clipPath8681)" />
   </g>
 </svg>

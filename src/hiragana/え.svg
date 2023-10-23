@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="1"
-     inkscape:cx="465.5"
-     inkscape:cy="383.5"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="531.03719"
+     inkscape:cy="538.10826"
      inkscape:window-width="1920"
-     inkscape:window-height="1171"
+     inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -51,15 +51,15 @@
   <defs
      id="defs82334">
     <clipPath
-       id="clipPath8318">
+       id="clipPath9097">
       <use
-         id="clone4036"
+         id="clone6519"
          xlink:href="#flowRoot1" />
     </clipPath>
     <clipPath
-       id="clipPath6980">
+       id="clipPath7331">
       <use
-         id="clone6011"
+         id="clone1913"
          xlink:href="#path1" />
     </clipPath>
   </defs>
@@ -78,15 +78,15 @@
      id="g2">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 311.76659,135.32085 388.45794,155.5513"
+       d="m 311.76659,135.32085 278.45794,110.5513"
        id="path2"
-       clip-path="url(#clipPath8318)"
+       clip-path="url(#clipPath9097)"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 166,492 C 326.16465,439.85118 659.41394,290.4502 633,349.5 582.11718,463.25131 409.30512,562.80852 360.10932,632.03907 235.55302,794.404 165,926 165,926 165,926 335.15595,651.44935 460.66905,692.39906 574.18684,729.4352 386.95428,1015.6757 932,868"
+       d="M 166,492 C 326.16465,439.85118 659.41394,290.4502 633,349.5 582.11718,463.25131 409.30512,562.80852 360.10932,632.03907 235.55302,794.404 165,926 165,926 c 0,0 170.15595,-274.55065 295.66905,-233.60094 113.51779,37.03614 -27.04572,287.9213 358.19387,199.64257"
        id="path3"
        sodipodi:nodetypes="csccsc"
-       clip-path="url(#clipPath6980)" />
+       clip-path="url(#clipPath7331)" />
   </g>
 </svg>

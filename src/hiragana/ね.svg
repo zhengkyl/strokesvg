@@ -26,10 +26,10 @@
      showgrid="false"
      units="px"
      inkscape:zoom="0.5"
-     inkscape:cx="647"
-     inkscape:cy="665"
+     inkscape:cx="669"
+     inkscape:cy="569"
      inkscape:window-width="1920"
-     inkscape:window-height="1171"
+     inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -51,21 +51,21 @@
   <defs
      id="defs82334">
     <clipPath
-       id="clipPath4978">
+       id="clipPath7414">
       <use
-         id="clone5236"
+         id="clone3571"
          xlink:href="#path2" />
     </clipPath>
     <clipPath
-       id="clipPath5289">
+       id="clipPath3687">
       <use
-         id="clone3099"
+         id="clone7422"
          xlink:href="#flowRoot1" />
     </clipPath>
     <clipPath
-       id="clipPath2525">
+       id="clipPath4879">
       <use
-         id="clone539"
+         id="clone3763"
          xlink:href="#path5" />
     </clipPath>
   </defs>
@@ -96,24 +96,24 @@
      id="g3">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 350.9979,54.6013 -23.14299,948.972"
+       d="M 350.9979,54.6013 330.56202,880.03777"
        id="path3"
        sodipodi:nodetypes="cc"
-       clip-path="url(#clipPath4978)" />
+       clip-path="url(#clipPath7414)" />
     <g
        id="g6">
       <path
          style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1139.2;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-         d="M 72,498 C 222.38957,391.92829 302.21883,383.87746 384.23045,327.76955 266.65863,468.00615 131.2601,855.35079 120.41422,863.38478 c 0,0 428.95924,-676.58793 596.24621,-551.53344 C 923.99993,466.84689 782.07275,820.08945 715,865 c -20.26491,13.56897 -95.8251,14.31535 -95.8251,14.31535 0,0 -165.59703,2.04613 -92.6749,-114.81535 75.44946,-120.91166 371.39949,54.22287 454.91421,185.40664"
+         d="M 72,498 C 222.38957,391.92829 302.21883,383.87746 384.23045,327.76955 266.65863,468.00615 131.2601,855.35079 120.41422,863.38478 c 0,0 428.95924,-676.58793 596.24621,-551.53344 C 923.99993,466.84689 782.07275,820.08945 715,865 c -20.26491,13.56897 -95.8251,14.31535 -95.8251,14.31535 0,0 -168.48827,0.1915 -92.6749,-114.81535 43.44946,-65.91166 288.39949,-43.77713 371.91421,87.40664"
          id="path1"
          sodipodi:nodetypes="cccsscsc"
-         clip-path="url(#clipPath5289)" />
+         clip-path="url(#clipPath3687)" />
       <path
          style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1139.2;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-         d="m 1402.1866,589.47774 c -10.4018,183.73904 -53.7206,251.27427 -60.7527,350.39315 -36.7605,-179.27103 -255.9997,-526.11796 -255.5506,-539.60782 0,0 263.3155,756.59913 61.3677,809.89673 C 896.952,1276.2181 708.4835,945.45649 715,865 c 1.96885,-24.30858 -95.8251,14.31535 -95.8251,14.31535 0,0 -165.59703,2.04613 -92.6749,-114.81535 75.44946,-120.91166 371.39949,54.22287 454.91421,185.40664"
+         d="m 1410.2468,610.50062 c -15.984,183.33778 -61.3364,249.52458 -71.3792,348.3838 -31.2924,-180.30593 -239.8835,-533.65893 -239.0244,-547.1289 0,0 240.1876,764.25598 36.7125,811.38828 C 884.36384,1281.5606 706.04005,945.22114 715,865 c 2.7071,-24.23747 -95.8251,14.31535 -95.8251,14.31535 0,0 -168.48827,0.1915 -92.6749,-114.81535 43.44946,-65.91166 288.39949,-43.77713 371.91421,87.40664"
          id="path4"
          sodipodi:nodetypes="cccsscsc"
-         clip-path="url(#clipPath2525)" />
+         clip-path="url(#clipPath4879)" />
     </g>
   </g>
 </svg>

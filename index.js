@@ -12,6 +12,8 @@ export function strokeAnimator(
 
   const strokeLengthsPrefixSum = [0];
 
+  const epsilon = 0.1;
+
   strokes.forEach((stroke, i) => {
     const length =
       stroke instanceof SVGGElement
@@ -20,7 +22,7 @@ export function strokeAnimator(
 
     strokeLengthsPrefixSum.push(strokeLengthsPrefixSum[i] + length);
 
-    stroke.style.strokeDasharray = length.toString();
+    stroke.style.strokeDasharray = `${length}`;
   });
 
   const totalStrokeLength = strokeLengthsPrefixSum[strokes.length];
@@ -31,7 +33,7 @@ export function strokeAnimator(
 
   function skipOne() {
     const stroke = strokes[strokeIndex];
-    stroke.style.strokeDashoffset = "0";
+    stroke.style.strokeDashoffset = 0;
     strokeIndex++;
 
     progressCallback(strokeLengthsPrefixSum[strokeIndex] / totalStrokeLength);
@@ -43,15 +45,17 @@ export function strokeAnimator(
     if (strokeIndex === strokes.length) {
       strokeIndex--;
     } else if (
-      strokes[strokeIndex].style.strokeDashoffset ===
-      strokes[strokeIndex].style.strokeDasharray
+      parseFloat(strokes[strokeIndex].style.strokeDasharray) -
+        parseFloat(strokes[strokeIndex].style.strokeDashoffset) <
+      2 * epsilon
     ) {
       if (strokeIndex === 0) return;
       strokeIndex--;
     }
 
     const stroke = strokes[strokeIndex];
-    stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
+    stroke.style.strokeDashoffset =
+      parseFloat(stroke.style.strokeDasharray) - epsilon;
 
     progressCallback(strokeLengthsPrefixSum[strokeIndex] / totalStrokeLength);
   }
@@ -106,7 +110,8 @@ export function strokeAnimator(
 
   function clearStrokes() {
     strokes.forEach((stroke) => {
-      stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
+      stroke.style.strokeDashoffset =
+        parseFloat(stroke.style.strokeDasharray) - epsilon;
     });
     strokeIndex = 0;
 
@@ -124,7 +129,7 @@ export function strokeAnimator(
 
     timeoutId = setTimeout(() => {
       timeoutId = null;
-      currPrevTime = performance.now();
+      currPrevTime = null;
       requestFrameId = requestAnimationFrame(pathFrame);
     }, timeout);
   }
@@ -133,12 +138,23 @@ export function strokeAnimator(
   const speed = scale / time;
 
   function pathFrame(time) {
+    // a performance.now() called before requestAnimationFrame may give a LATER time
+    // which causes a negative time step and may be one cause of stroke flickering
+    // I don't really understand it except browser implementation of scheduling
+    // therefore, we must use a single source of time and skip the first frame
+    if (!currPrevTime) {
+      currPrevTime = time;
+      requestFrameId = requestAnimationFrame(pathFrame);
+      return;
+    }
+
     const stroke = strokes[strokeIndex];
 
+    console.log(time - currPrevTime);
     currOffset = Math.max(currOffset - speed * (time - currPrevTime), 0);
     currPrevTime = time;
 
-    stroke.style.strokeDashoffset = currOffset.toString();
+    stroke.style.strokeDashoffset = currOffset;
 
     progressCallback(
       (strokeLengthsPrefixSum[strokeIndex + 1] - currOffset) / totalStrokeLength
@@ -163,7 +179,9 @@ export function strokeAnimator(
     let lowerBound = strokeLengthsPrefixSum[strokeIndex];
     while (lowerBound > strokeProgress) {
       const stroke = strokes[strokeIndex];
-      stroke.style.strokeDashoffset = stroke.style.strokeDasharray;
+
+      stroke.style.strokeDashoffset =
+        parseFloat(stroke.style.strokeDasharray) - epsilon;
 
       strokeIndex--;
       lowerBound = strokeLengthsPrefixSum[strokeIndex];
@@ -172,7 +190,7 @@ export function strokeAnimator(
     let upperBound = strokeLengthsPrefixSum[strokeIndex + 1];
     while (upperBound <= strokeProgress) {
       const stroke = strokes[strokeIndex];
-      stroke.style.strokeDashoffset = (0).toString();
+      stroke.style.strokeDashoffset = 0;
 
       strokeIndex++;
       if (strokeIndex === strokes.length) return;
@@ -180,7 +198,7 @@ export function strokeAnimator(
     }
 
     const stroke = strokes[strokeIndex];
-    stroke.style.strokeDashoffset = (upperBound - strokeProgress).toString();
+    stroke.style.strokeDashoffset = upperBound - strokeProgress;
   }
 
   return {
