@@ -65,9 +65,14 @@ module.exports = {
           }
         }
 
+        const shadowG = querySelector(root, "svg > g:first-of-type");
+        shadowG.attributes["data-strokesvg"] = "shadows";
+        shadowG.attributes.style = "fill:var(--shadow,#ccc)";
+
         const strokeG = querySelector(root, "svg > g:last-of-type");
+        strokeG.attributes["data-strokesvg"] = "strokes";
         strokeG.attributes.style =
-          "fill:none;stroke-width:128;stroke-linecap:round";
+          "stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round";
 
         for (let i = 0; i < strokeG.children.length; i++) {
           // Create a new object so style is first attribute and easy to see

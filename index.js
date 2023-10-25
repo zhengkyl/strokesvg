@@ -1,11 +1,11 @@
 export function strokeAnimator(
   svgEl,
-  { time = 3000, gap = 400, delay = 300, progressCallback = () => {} } = {}
+  { time = 1000, gap = 400, delay = 300, progressCallback = () => {} } = {}
 ) {
   const strokes = [];
 
   svgEl
-    .querySelectorAll("[data-strokesvg] > g:last-of-type > *")
+    .querySelectorAll('svg[data-strokesvg] > g[data-strokesvg="strokes"] > *')
     .forEach((e) => {
       strokes.push(e);
     });
@@ -15,10 +15,20 @@ export function strokeAnimator(
   const epsilon = 0.1;
 
   strokes.forEach((stroke, i) => {
-    const length =
-      stroke instanceof SVGGElement
-        ? stroke.children[0].getTotalLength()
-        : stroke.getTotalLength();
+    let length;
+
+    // All strokes in a group should be the same length, but precision is lost during optimization
+    // For large errors, strokes will not offset fully, so here we minimize max error for any stroke
+    if (stroke instanceof SVGGElement) {
+      let sum = 0;
+      for (const child of stroke.children) {
+        console.log(child.getTotalLength());
+        sum += child.getTotalLength();
+      }
+      length = sum / stroke.children.length;
+    } else {
+      length = stroke.getTotalLength();
+    }
 
     strokeLengthsPrefixSum.push(strokeLengthsPrefixSum[i] + length);
 
@@ -150,7 +160,6 @@ export function strokeAnimator(
 
     const stroke = strokes[strokeIndex];
 
-    console.log(time - currPrevTime);
     currOffset = Math.max(currOffset - speed * (time - currPrevTime), 0);
     currPrevTime = time;
 

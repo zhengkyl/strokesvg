@@ -36,23 +36,32 @@ These files should NOT be used as is.
 
 ## Usage
 
-The SVGs have no color styling so you must provide a fill and stroke color.
+The shadows and strokes have a default color which you can override using CSS variables.
 
 ```css
-/* Shape color */
-svg[data-strokesvg] > g:first-of-type {
-  fill: #ccc;
+/* default colors */
+svg[data-strokesvg] {
+  --shadow: #ccc;
+  --stroke: #000;
 }
-/* Stroke color */
-svg[data-strokesvg] > g:last-of-type {
-  stroke: #000;
+```
+
+For more specific customization, you can just change the `fill`, `stroke`, and anything else directly.
+
+```css
+svg[data-strokesvg] > g[data-strokesvg="shadows"] > :nth-child(2) {
+  fill: blue;
+}
+
+svg[data-strokesvg] > g[data-strokesvg="strokes"] > :nth-child(2) {
+  stroke: red;
 }
 ```
 
 Here is some CSS to have the stroke animation automatically start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, by itself, this only runs on page load.
 
 ```css
-svg[data-strokesvg] > g:last-of-type > * {
+svg[data-strokesvg] > g[data-strokesvg="strokes"] > * {
   --time: 0.7s; /* time to draw a "max length stroke" */
   --gap: 0.7s; /* time between stroke starts */
   --delay: 0.5s; /* time before first stroke */
@@ -61,7 +70,6 @@ svg[data-strokesvg] > g:last-of-type > * {
     );
   stroke-dasharray: 3333;
   stroke-dashoffset: 3333;
-  stroke-linecap: round; /* makes curves animate smoother */
 }
 
 @keyframes s {
@@ -79,7 +87,7 @@ See `strokeAnimator` in [`index.js`](./index.js) for an overengineered example. 
 
 The first `<g>` element contains `<path>` elements representing shadows for each stroke/stroke section. These are visible while the strokes are animated. These are also used as clip masks for the strokes.
 
-The second `<g>` element contains `<path>` elements representing each stroke. These can be animated using the `stroke-dasharray` and `stroke-dashoffset` css properties. The order/index is represented by the `--i` css variable.
+The second `<g>` element contains `<path>` elements representing each stroke. These can be animated using the `stroke-dasharray` and `stroke-dashoffset` css properties. The stroke order is represented by the element order and duplicated via the `--i` css variable (useful for the CSS snippet).
 
 Some strokes self intersect, like in loops, so they are created from multiple stroke "shadows" and corresponding strokes so that the clipping works correctly. In these cases, parts of the same stroke are grouped together.
 
@@ -121,5 +129,5 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 - `performance.now()` can return an earlier timestamp than a `requestAnimationFrame` called after it.
 - `stroke-dasharray` and `stroke-dashoffset` act weird
   - setting `stroke-dashoffset` equal to `stroke-dasharray` triggers some superposition edge case where the stroke should? be invisible but is visible? or maybe the reverse. I address this by adding an small epsilon.
-  - in SOME situations if a stroke with `stroke-linecap: round` is offset, it won't start rendering at all until it suddenly pops into view, no matter what offset I choose
-    - I know this happens if I place the strokes so that they are contained within `stroke-linecap: butt`
+  - in SOME situations if a stroke with `stroke-linecap: round` is offset, it won't start rendering at all until it suddenly pops into view, no matter what offset I choose. I address this by adding a 128px buffer to the start of every stroke (in the svg) instead of using `stroke-dashoffset`.
+    - I know this happens if I place the strokes so that they are contained within `stroke-linecap: butt`, so maybe it's a rendering optimization? that culls invisible nodes, except that makes no sense either

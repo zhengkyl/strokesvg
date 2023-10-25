@@ -52,16 +52,16 @@ export default defineConfig({
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/kleeone/v7/LDI2apCLNRc6A8oT4pbYF8OpG_bEg9BQg0jk5IC-EIRaB2yYJkvAGA.119.woff2) format('woff2');
   unicode-range: U+20, U+2027, U+3001-3002, U+3041-307f, U+3081-308f, U+3091-3093, U+3099-309a, U+309d-309e, U+30a1-30e1, U+30e3-30ed, U+30ef-30f0, U+30f2-30f4, U+30fb-30fe, U+ff0c, U+ff0e;
-  }`,
+}`,
     },
     {
       getCSS: () =>
-        `svg[data-strokesvg] > g:first-of-type {
-  fill: #ccc;
+        `
+svg[data-strokesvg] {
+  --shadow: #ccc;
+  --stroke: #000;
 }
-svg[data-strokesvg] > g:last-of-type {
-  stroke: #000;
-}`,
+`,
     },
   ],
 });

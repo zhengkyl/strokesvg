@@ -7,11 +7,11 @@
       <use href="#3044b"/>
     </clipPath>
   </defs>
-  <g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
     <path id="3044a" d="M147 260v2q0 7 10 19 10 10 11 26l6 107q5 60 14 126 11 65 27 126 17 60 44 107 28 46 69 68l17 7q9 3 16 3 10 0 21-8t14-41q3-19 11-47l17-61 17-55 12-33 4-12 1-10q0-15-9-15-11 0-21 21l-21 38q-17 28-36 64-20 35-33 63-27-22-45-66-19-44-31-98-11-55-17-111t-8-102q-3-47-3-74 0-10-3-20-2-11-17-18-10-5-25-9-14-5-25-5-13 0-17 8z"/>
     <path id="3044b" d="M916 635v-3q-1-23-17-61-15-37-40-79-24-43-52-81-28-39-53-63-26-24-44-24-12 0-20 8-7 7-7 18 0 14 12 25 22 18 46 54 25 35 46 77 23 41 38 81 17 40 21 68 2 12 10 18 8 5 18 5 15 0 28-11 14-12 14-32z"/>
   </g>
-  <g style="fill:none;stroke-width:128;stroke-linecap:round">
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
     <path style="--i:0" d="M185 174c-1 257 82 697 148 667l99-226" clip-path="url(#3044c)"/>
     <path style="--i:1" d="m656 259 218 364" clip-path="url(#3044d)"/>
   </g>
