@@ -22,7 +22,6 @@ export function strokeAnimator(
     if (stroke instanceof SVGGElement) {
       let sum = 0;
       for (const child of stroke.children) {
-        console.log(child.getTotalLength());
         sum += child.getTotalLength();
       }
       length = sum / stroke.children.length;
