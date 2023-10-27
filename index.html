@@ -86,6 +86,7 @@
     <script type="module">
       import { strokeAnimator } from "./index.js";
 
+      // nihon-shiki romaji is first b/c unicode char name
       const kana = [
         [
           { hira: "あ", kata: "ア", romaji: ["a"] },
@@ -110,29 +111,29 @@
         ],
         [
           { hira: "さ", kata: "サ", romaji: ["sa"] },
-          { hira: "し", kata: "シ", romaji: ["shi", "si"] },
+          { hira: "し", kata: "シ", romaji: ["si", "shi"] },
           { hira: "す", kata: "ス", romaji: ["su"] },
           { hira: "せ", kata: "セ", romaji: ["se"] },
           { hira: "そ", kata: "ソ", romaji: ["so"] },
         ],
         [
           { hira: "ざ", kata: "ザ", romaji: ["za"] },
-          { hira: "じ", kata: "ジ", romaji: ["ji", "zi"] },
+          { hira: "じ", kata: "ジ", romaji: ["zi", "ji"] },
           { hira: "ず", kata: "ズ", romaji: ["zu"] },
           { hira: "ぜ", kata: "ゼ", romaji: ["ze"] },
           { hira: "ぞ", kata: "ゾ", romaji: ["zo"] },
         ],
         [
           { hira: "た", kata: "タ", romaji: ["ta"] },
-          { hira: "ち", kata: "チ", romaji: ["chi", "ti"] },
-          { hira: "つ", kata: "ツ", romaji: ["tsu", "tu"] },
+          { hira: "ち", kata: "チ", romaji: ["ti", "chi"] },
+          { hira: "つ", kata: "ツ", romaji: ["tu", "tsu"] },
           { hira: "て", kata: "テ", romaji: ["te"] },
           { hira: "と", kata: "ト", romaji: ["to"] },
         ],
         [
           { hira: "だ", kata: "ダ", romaji: ["da"] },
-          { hira: "ぢ", kata: "ヂ", romaji: ["ji", "di", "zi"] },
-          { hira: "づ", kata: "ヅ", romaji: ["zu", "du", "zu"] },
+          { hira: "ぢ", kata: "ヂ", romaji: ["di", "ji", "zi"] },
+          { hira: "づ", kata: "ヅ", romaji: ["du", "zu"] },
           { hira: "で", kata: "デ", romaji: ["de"] },
           { hira: "ど", kata: "ド", romaji: ["do"] },
         ],
@@ -146,7 +147,7 @@
         [
           { hira: "は", kata: "ハ", romaji: ["ha"] },
           { hira: "ひ", kata: "ヒ", romaji: ["hi"] },
-          { hira: "ふ", kata: "フ", romaji: ["fu", "hu"] },
+          { hira: "ふ", kata: "フ", romaji: ["hu", "fu"] },
           { hira: "へ", kata: "ヘ", romaji: ["he"] },
           { hira: "ほ", kata: "ホ", romaji: ["ho"] },
         ],
@@ -190,7 +191,7 @@
           null,
           null,
           null,
-          { hira: "を", kata: "ヲ", romaji: ["wo", "o"] }, // order by longest to shortest romaji
+          { hira: "を", kata: "ヲ", romaji: ["wo", "o"] },
         ],
         [{ hira: "ん", kata: "ン", romaji: ["n"] }],
       ];
@@ -361,7 +362,7 @@
       function getUnicodeName(type, info) {
         return `U+${info[type].codePointAt(0).toString(16)} ${
           type === "hira" ? "HIRAGANA" : "KATAKANA"
-        } ${info.romaji.at(-1)}`.toUpperCase();
+        } ${info.romaji.at(0)}`.toUpperCase();
       }
 
       const controls = document.getElementById("controls").children;
