@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StrokeSVG Preview</title>
     <link rel="stylesheet" href="index.css" />
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
-      async
-    ></script>
   </head>
   <body class="max-w-screen-md mx-auto my-4 px-4">
     <main un-cloak class="flex flex-col gap-4 dark:bg-stone-950">
@@ -33,7 +28,6 @@
         <svg
           id="previewSvg"
           class="border border-stone-300 rounded-md min-w-[250px] min-h-[250px] aspect-square flex-1"
-          data-cache="disabled"
         ></svg>
         <div class="py-2 flex-1">
           <h2 id="previewText" class="text-2xl mb-2 text-center">
@@ -52,18 +46,21 @@
           />
           <div id="controls" class="flex gap-2 justify-center">
             <button
+              aria-label="Previous stroke"
               disabled
               class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
               <div class="i-fluent:rewind-16-regular text-4xl"></div>
             </button>
             <button
+              aria-label="Play/Pause stroke"
               disabled
               class="px-4 py-4 bg-stone-900 text-stone-50 hover:bg-stone-900/90 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50/90 rounded-md ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
               <div class="i-fluent:video-play-pause-20-filled text-4xl"></div>
             </button>
             <button
+              aria-label="Next stroke"
               disabled
               class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
             >
@@ -84,7 +81,7 @@
       ></div>
     </main>
     <script type="module">
-      import { strokeAnimator } from "./index.js";
+      import { strokeAnimator, svgLoader } from "./index.js";
 
       // nihon-shiki romaji is first b/c unicode char name
       const kana = [
@@ -237,11 +234,6 @@
         searchList.classList.remove("flex");
       });
 
-      let previewSvg = document.getElementById("previewSvg");
-      const previewText = document.getElementById("previewText");
-      const hiraganaBank = document.getElementById("hiraganaBank");
-      const katakanaBank = document.getElementById("katakanaBank");
-
       function debounce(func, time) {
         let timeout;
         return (...args) => {
@@ -365,36 +357,48 @@
         } ${info.romaji.at(0)}`.toUpperCase();
       }
 
+      const previewSvg = document.getElementById("previewSvg");
+      const previewText = document.getElementById("previewText");
+      const hiraganaBank = document.getElementById("hiraganaBank");
+      const katakanaBank = document.getElementById("katakanaBank");
       const controls = document.getElementById("controls").children;
       const progressSlider = document.getElementById("progressSlider");
-      progressSlider.addEventListener("input", (e) => {
-        animator.setProgress(parseFloat(e.target.value));
-      });
 
       let animator;
 
       controls[0].addEventListener("click", () => animator.prev());
       controls[1].addEventListener("click", () => animator.toggle());
       controls[2].addEventListener("click", () => animator.next());
-
-      window.addEventListener("iconload", () => {
-        animator = strokeAnimator(previewSvg, {
-          progressCallback: (t) => (progressSlider.value = t),
-        });
-        progressSlider.removeAttribute("disabled");
-        controls[0].removeAttribute("disabled", false);
-        controls[1].removeAttribute("disabled", false);
-        controls[2].removeAttribute("disabled", false);
+      progressSlider.addEventListener("input", (e) => {
+        animator.setProgress(parseFloat(e.target.value));
       });
 
-      function setPreview(char, title) {
+      const { load } = svgLoader(previewSvg);
+
+      async function setPreview(char, title) {
+        progressSlider.setAttribute("disabled", "");
+        controls[0].setAttribute("disabled", "");
+        controls[1].setAttribute("disabled", "");
+        controls[2].setAttribute("disabled", "");
+
         const fileSrc = `./dist/hiragana/${char}.svg`;
-        if (fileSrc === previewSvg.getAttribute("data-src")) return;
         if (animator) animator.stop();
         progressSlider.value = 1;
 
-        previewSvg.setAttribute("data-src", fileSrc);
         previewText.textContent = title;
+        try {
+          await load(fileSrc);
+          animator = strokeAnimator(previewSvg, {
+            progressCallback: (t) => (progressSlider.value = t),
+          });
+          progressSlider.removeAttribute("disabled");
+          controls[0].removeAttribute("disabled");
+          controls[1].removeAttribute("disabled");
+          controls[2].removeAttribute("disabled");
+        } catch (e) {
+          previewSvg.replaceChildren();
+          alert(e);
+        }
       }
 
       function setupBanks(bank, bankEl) {

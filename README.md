@@ -13,7 +13,7 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee O
 - [x] website
   - [x] search
   - [x] use same font
-  - [ ] usable offline -> replace svg loader lib
+  - [x] usable offline -> replace svg loader lib
 
 ## Alternatives
 

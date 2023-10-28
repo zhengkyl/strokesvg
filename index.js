@@ -218,3 +218,36 @@ export function strokeAnimator(
     setProgress,
   };
 }
+
+export function svgLoader(svg) {
+  let controller;
+  async function load(url) {
+    // Don't bother checking if same URL b/c a proper return promise is annoying
+    if (controller != null) controller.abort();
+
+    controller = new AbortController();
+    const resp = await fetch(url, { signal: controller.signal });
+    if (!resp.ok) {
+      throw "SVG does not exist. :/";
+    }
+    controller = null;
+
+    const text = await resp.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+
+    const newSvg = doc.querySelector("svg");
+
+    for (const { name, value } of newSvg.attributes) {
+      // Just blindly apply b/c we know no clashes or leftover attributes
+      // If used outside this project, make sure only the original attributes + these are applied
+      svg.setAttribute(name, value);
+    }
+
+    svg.replaceChildren(...newSvg.childNodes);
+  }
+
+  return {
+    load,
+  };
+}
