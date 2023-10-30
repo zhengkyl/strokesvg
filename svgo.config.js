@@ -39,6 +39,10 @@ module.exports = {
             selector: "g > path",
             attributes: "style",
           },
+          {
+            selector: "g > g",
+            attributes: "style",
+          },
         ],
       },
     },
