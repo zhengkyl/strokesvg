@@ -114,10 +114,11 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 #### Step 3: Manually draw stroke paths
 
 - Use default stroke settings, except width is 128px.
-- Draw straight lines that cover each stroke shape.
+- Draw lines that cover each stroke shape.
+
 - If a stroke unavoidably self-intersects, do the following.
-  - Duplicate the drawn stroke. Adjust the path of the second so that it doesn't self intersect, but remains the same length.
-  - Duplicate the stroke shape too.
+  - Split the stroke shape into 2 (or more if necessary).
+  - Duplicate the drawn stroke. Adjust the path of the second so that it doesn't self intersect the first stroke shape.
 
 #### Step 4: Clip to shapes
 
@@ -126,8 +127,6 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 
 ### Misc Mysteries
 
-- `performance.now()` can return an earlier timestamp than a `requestAnimationFrame` called after it.
 - `stroke-dasharray` and `stroke-dashoffset` act weird
-  - setting `stroke-dashoffset` equal to `stroke-dasharray` triggers some superposition edge case where the stroke should? be invisible but is visible? or maybe the reverse. I address this by adding an small epsilon.
-  - in SOME situations if a stroke with `stroke-linecap: round` is offset, it won't start rendering at all until it suddenly pops into view, no matter what offset I choose. I address this by adding a 128px buffer to the start of every stroke (in the svg) instead of using `stroke-dashoffset`.
-    - I know this happens if I place the strokes so that they are contained within `stroke-linecap: butt`, so maybe it's a rendering optimization? that culls invisible nodes, except that makes no sense either
+  - There are precision issues with stroke lengths, especially after reducing number precision, which I addressed by adding an epsilon whenever dealing with stroke paths in my `strokeAnimator`. Otherwise strokes can flicker in and out of view when `stroke-dashoffset` is set to stroke length.
+  - Relatedly, offseting `stroke-linecap: round` strokes with `stroke-dashoffset` acts inconsistently (popping into view instead of sliding as offset changes). I found that if I offset the nodes by 1/2 path width before a stroke starts in the SVG itself, then the round linecap slides into view as expected.

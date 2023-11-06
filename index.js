@@ -1,6 +1,6 @@
 export function strokeAnimator(
   svgEl,
-  { time = 1000, gap = 400, delay = 300, progressCallback = () => {} } = {}
+  { time = 500, gap = 300, delay = 300, progressCallback = () => {} } = {}
 ) {
   const strokes = [];
 
@@ -12,6 +12,7 @@ export function strokeAnimator(
 
   const strokeLengthsPrefixSum = [0];
 
+  // This fixes stroke flickering in/out of view when stroke-dashoffset == stroke length
   const epsilon = 0.1;
 
   strokes.forEach((stroke, i) => {
