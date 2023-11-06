@@ -105,11 +105,19 @@ class HelperEffectExtension(inkex.EffectExtension):
             return
 
         # a closed path indicates a shape, not a stroke
-        if strokes[0].get("d")[-1] in ['z', 'Z']:
+        if strokes[0].get("d")[-1] in ["z", "Z"]:
             strokes, shapes = shapes, strokes
+
             # ensure strokes are on top of shapes
-            strokes[0].getparent().delete()
-            shapes[0].getparent().addnext(strokes[0].getparent())
+            # can't use get parent b/c might be nested
+            shapesParent = self.document.xpath(
+                "/svg:svg/svg:g[2]", namespaces=inkex.NSS
+            )[0]
+            strokesParent = self.document.xpath(
+                "/svg:svg/svg:g[1]", namespaces=inkex.NSS
+            )[0]
+            strokesParent.delete()
+            shapesParent.addnext(strokesParent)
          
         defs = self.document.xpath('//svg:defs', namespaces=inkex.NSS)[0]
 
