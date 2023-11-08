@@ -6,7 +6,7 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee O
 
 - [x] configure svgo
   - [x] write plugin
-- [ ] hiragana
+- [x] hiragana
 - [ ] katakana
 - [x] automate somehow?
   - [x] semi automated with inkscape extension
