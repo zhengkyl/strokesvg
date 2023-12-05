@@ -229,7 +229,7 @@ export function svgLoader(svg) {
     controller = new AbortController();
     const resp = await fetch(url, { signal: controller.signal });
     if (!resp.ok) {
-      throw "SVG does not exist. :/";
+      throw "SVG does not exist yet. :/";
     }
     controller = null;
 

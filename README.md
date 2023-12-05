@@ -1,6 +1,6 @@
 # strokesvg
 
-WIP SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee One](https://fonts.google.com/specimen/Klee+One).
+SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee One](https://github.com/fontworks-fonts/Klee) which is licensed under the [SIL Open Font License](https://openfontlicense.org/).
 
 ## TODO
 
@@ -17,10 +17,10 @@ WIP SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee O
 
 ## Alternatives
 
-There are great open source projects in this area, but they didn't fit my needs. I highly recommend these.
+There are great open source projects in this area, but they didn't fit my needs. I highly recommend these if you're looking for animated SVGs for a larger character set.
 
-- [KanjiVG](https://github.com/KanjiVG/kanjivg)
 - [AnimCJK](https://github.com/parsimonhi/animCJK)
+- [KanjiVG](https://github.com/KanjiVG/kanjivg)
 
 ## Files
 

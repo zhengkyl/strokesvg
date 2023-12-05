@@ -74,129 +74,144 @@
           </div>
         </div>
       </div>
-      <h3 class="font-bold text-2xl">Hiragana</h3>
-      <div
-        id="hiraganaBank"
-        class="text-lg flex flex-wrap gap-x-2 gap-y-4 font-['Klee_One'] font-600"
-      ></div>
-      <h3 class="font-bold text-2xl">Katakana</h3>
-      <div
-        id="katakanaBank"
-        class="text-lg flex flex-wrap gap-x-2 gap-y-4 font-['Klee_One'] font-600"
-      ></div>
+      <div class="flex flex-wrap justify-evenly text-2xl">
+        <div>
+          <h3 class="font-bold">Hiragana</h3>
+          <div
+            id="hiraganaBank"
+            class="grid grid-cols-5 gap-2 font-['Klee_One'] font-600"
+          ></div>
+        </div>
+        <div>
+          <h3 class="font-bold">Katakana</h3>
+          <div
+            id="katakanaBank"
+            class="grid grid-cols-5 gap-2 font-['Klee_One'] font-600"
+          ></div>
+        </div>
+      </div>
     </main>
+
     <script type="module">
       import { strokeAnimator, svgLoader } from "./index.js";
 
-      // nihon-shiki romaji is first b/c unicode char name
-      const kana = [
+      // first romaji matches unicode (nihon-shiki)
+      const kanaChart = [
         [
-          { hira: "あ", kata: "ア", romaji: ["a"] },
-          { hira: "い", kata: "イ", romaji: ["i"] },
-          { hira: "う", kata: "ウ", romaji: ["u"] },
-          { hira: "え", kata: "エ", romaji: ["e"] },
-          { hira: "お", kata: "オ", romaji: ["o"] },
+          { hiragana: "あ", katakana: "ア", romaji: ["a"] },
+          { hiragana: "い", katakana: "イ", romaji: ["i"] },
+          { hiragana: "う", katakana: "ウ", romaji: ["u"] },
+          { hiragana: "え", katakana: "エ", romaji: ["e"] },
+          { hiragana: "お", katakana: "オ", romaji: ["o"] },
         ],
         [
-          { hira: "か", kata: "カ", romaji: ["ka"] },
-          { hira: "き", kata: "キ", romaji: ["ki"] },
-          { hira: "く", kata: "ク", romaji: ["ku"] },
-          { hira: "け", kata: "ケ", romaji: ["ke"] },
-          { hira: "こ", kata: "コ", romaji: ["ko"] },
+          { hiragana: "か", katakana: "カ", romaji: ["ka"] },
+          { hiragana: "き", katakana: "キ", romaji: ["ki"] },
+          { hiragana: "く", katakana: "ク", romaji: ["ku"] },
+          { hiragana: "け", katakana: "ケ", romaji: ["ke"] },
+          { hiragana: "こ", katakana: "コ", romaji: ["ko"] },
         ],
         [
-          { hira: "が", kata: "ガ", romaji: ["ga"] },
-          { hira: "ぎ", kata: "ギ", romaji: ["gi"] },
-          { hira: "ぐ", kata: "グ", romaji: ["gu"] },
-          { hira: "げ", kata: "ゲ", romaji: ["ge"] },
-          { hira: "ご", kata: "ゴ", romaji: ["go"] },
+          { hiragana: "が", katakana: "ガ", romaji: ["ga"] },
+          { hiragana: "ぎ", katakana: "ギ", romaji: ["gi"] },
+          { hiragana: "ぐ", katakana: "グ", romaji: ["gu"] },
+          { hiragana: "げ", katakana: "ゲ", romaji: ["ge"] },
+          { hiragana: "ご", katakana: "ゴ", romaji: ["go"] },
         ],
         [
-          { hira: "さ", kata: "サ", romaji: ["sa"] },
-          { hira: "し", kata: "シ", romaji: ["si", "shi"] },
-          { hira: "す", kata: "ス", romaji: ["su"] },
-          { hira: "せ", kata: "セ", romaji: ["se"] },
-          { hira: "そ", kata: "ソ", romaji: ["so"] },
+          { hiragana: "さ", katakana: "サ", romaji: ["sa"] },
+          { hiragana: "し", katakana: "シ", romaji: ["si", "shi"] },
+          { hiragana: "す", katakana: "ス", romaji: ["su"] },
+          { hiragana: "せ", katakana: "セ", romaji: ["se"] },
+          { hiragana: "そ", katakana: "ソ", romaji: ["so"] },
         ],
         [
-          { hira: "ざ", kata: "ザ", romaji: ["za"] },
-          { hira: "じ", kata: "ジ", romaji: ["zi", "ji"] },
-          { hira: "ず", kata: "ズ", romaji: ["zu"] },
-          { hira: "ぜ", kata: "ゼ", romaji: ["ze"] },
-          { hira: "ぞ", kata: "ゾ", romaji: ["zo"] },
+          { hiragana: "ざ", katakana: "ザ", romaji: ["za"] },
+          { hiragana: "じ", katakana: "ジ", romaji: ["zi", "ji"] },
+          { hiragana: "ず", katakana: "ズ", romaji: ["zu"] },
+          { hiragana: "ぜ", katakana: "ゼ", romaji: ["ze"] },
+          { hiragana: "ぞ", katakana: "ゾ", romaji: ["zo"] },
         ],
         [
-          { hira: "た", kata: "タ", romaji: ["ta"] },
-          { hira: "ち", kata: "チ", romaji: ["ti", "chi"] },
-          { hira: "つ", kata: "ツ", romaji: ["tu", "tsu"] },
-          { hira: "て", kata: "テ", romaji: ["te"] },
-          { hira: "と", kata: "ト", romaji: ["to"] },
+          { hiragana: "た", katakana: "タ", romaji: ["ta"] },
+          { hiragana: "ち", katakana: "チ", romaji: ["ti", "chi"] },
+          { hiragana: "つ", katakana: "ツ", romaji: ["tu", "tsu"] },
+          { hiragana: "て", katakana: "テ", romaji: ["te"] },
+          { hiragana: "と", katakana: "ト", romaji: ["to"] },
         ],
         [
-          { hira: "だ", kata: "ダ", romaji: ["da"] },
-          { hira: "ぢ", kata: "ヂ", romaji: ["di", "ji", "zi"] },
-          { hira: "づ", kata: "ヅ", romaji: ["du", "zu"] },
-          { hira: "で", kata: "デ", romaji: ["de"] },
-          { hira: "ど", kata: "ド", romaji: ["do"] },
+          { hiragana: "だ", katakana: "ダ", romaji: ["da"] },
+          { hiragana: "ぢ", katakana: "ヂ", romaji: ["di", "ji", "zi"] },
+          { hiragana: "づ", katakana: "ヅ", romaji: ["du", "zu"] },
+          { hiragana: "で", katakana: "デ", romaji: ["de"] },
+          { hiragana: "ど", katakana: "ド", romaji: ["do"] },
         ],
         [
-          { hira: "な", kata: "ナ", romaji: ["na"] },
-          { hira: "に", kata: "ニ", romaji: ["ni"] },
-          { hira: "ぬ", kata: "ヌ", romaji: ["nu"] },
-          { hira: "ね", kata: "ネ", romaji: ["ne"] },
-          { hira: "の", kata: "ノ", romaji: ["no"] },
+          { hiragana: "な", katakana: "ナ", romaji: ["na"] },
+          { hiragana: "に", katakana: "ニ", romaji: ["ni"] },
+          { hiragana: "ぬ", katakana: "ヌ", romaji: ["nu"] },
+          { hiragana: "ね", katakana: "ネ", romaji: ["ne"] },
+          { hiragana: "の", katakana: "ノ", romaji: ["no"] },
         ],
         [
-          { hira: "は", kata: "ハ", romaji: ["ha"] },
-          { hira: "ひ", kata: "ヒ", romaji: ["hi"] },
-          { hira: "ふ", kata: "フ", romaji: ["hu", "fu"] },
-          { hira: "へ", kata: "ヘ", romaji: ["he"] },
-          { hira: "ほ", kata: "ホ", romaji: ["ho"] },
+          { hiragana: "は", katakana: "ハ", romaji: ["ha"] },
+          { hiragana: "ひ", katakana: "ヒ", romaji: ["hi"] },
+          { hiragana: "ふ", katakana: "フ", romaji: ["hu", "fu"] },
+          { hiragana: "へ", katakana: "ヘ", romaji: ["he"] },
+          { hiragana: "ほ", katakana: "ホ", romaji: ["ho"] },
         ],
         [
-          { hira: "ば", kata: "バ", romaji: ["ba"] },
-          { hira: "び", kata: "ビ", romaji: ["bi"] },
-          { hira: "ぶ", kata: "ブ", romaji: ["bu"] },
-          { hira: "べ", kata: "ベ", romaji: ["be"] },
-          { hira: "ぼ", kata: "ボ", romaji: ["bo"] },
+          { hiragana: "ば", katakana: "バ", romaji: ["ba"] },
+          { hiragana: "び", katakana: "ビ", romaji: ["bi"] },
+          { hiragana: "ぶ", katakana: "ブ", romaji: ["bu"] },
+          { hiragana: "べ", katakana: "ベ", romaji: ["be"] },
+          { hiragana: "ぼ", katakana: "ボ", romaji: ["bo"] },
         ],
         [
-          { hira: "ぱ", kata: "パ", romaji: ["pa"] },
-          { hira: "ぴ", kata: "ピ", romaji: ["pi"] },
-          { hira: "ぷ", kata: "プ", romaji: ["pu"] },
-          { hira: "ぺ", kata: "ペ", romaji: ["pe"] },
-          { hira: "ぽ", kata: "ポ", romaji: ["po"] },
+          { hiragana: "ぱ", katakana: "パ", romaji: ["pa"] },
+          { hiragana: "ぴ", katakana: "ピ", romaji: ["pi"] },
+          { hiragana: "ぷ", katakana: "プ", romaji: ["pu"] },
+          { hiragana: "ぺ", katakana: "ペ", romaji: ["pe"] },
+          { hiragana: "ぽ", katakana: "ポ", romaji: ["po"] },
         ],
         [
-          { hira: "ま", kata: "マ", romaji: ["ma"] },
-          { hira: "み", kata: "ミ", romaji: ["mi"] },
-          { hira: "む", kata: "ム", romaji: ["mu"] },
-          { hira: "め", kata: "メ", romaji: ["me"] },
-          { hira: "も", kata: "モ", romaji: ["mo"] },
+          { hiragana: "ま", katakana: "マ", romaji: ["ma"] },
+          { hiragana: "み", katakana: "ミ", romaji: ["mi"] },
+          { hiragana: "む", katakana: "ム", romaji: ["mu"] },
+          { hiragana: "め", katakana: "メ", romaji: ["me"] },
+          { hiragana: "も", katakana: "モ", romaji: ["mo"] },
         ],
         [
-          { hira: "や", kata: "ヤ", romaji: ["ya"] },
+          { hiragana: "や", katakana: "ヤ", romaji: ["ya"] },
           null,
-          { hira: "ゆ", kata: "ユ", romaji: ["yu"] },
+          { hiragana: "ゆ", katakana: "ユ", romaji: ["yu"] },
           null,
-          { hira: "よ", kata: "ヨ", romaji: ["yo"] },
+          { hiragana: "よ", katakana: "ヨ", romaji: ["yo"] },
         ],
         [
-          { hira: "ら", kata: "ラ", romaji: ["ra"] },
-          { hira: "り", kata: "リ", romaji: ["ri"] },
-          { hira: "る", kata: "ル", romaji: ["ru"] },
-          { hira: "れ", kata: "レ", romaji: ["re"] },
-          { hira: "ろ", kata: "ロ", romaji: ["ro"] },
+          { hiragana: "ら", katakana: "ラ", romaji: ["ra"] },
+          { hiragana: "り", katakana: "リ", romaji: ["ri"] },
+          { hiragana: "る", katakana: "ル", romaji: ["ru"] },
+          { hiragana: "れ", katakana: "レ", romaji: ["re"] },
+          { hiragana: "ろ", katakana: "ロ", romaji: ["ro"] },
         ],
         [
-          { hira: "わ", kata: "ワ", romaji: ["wa"] },
+          { hiragana: "わ", katakana: "ワ", romaji: ["wa"] },
           null,
           null,
           null,
-          { hira: "を", kata: "ヲ", romaji: ["wo", "o"] },
+          { hiragana: "を", katakana: "ヲ", romaji: ["wo", "o"] },
         ],
-        [{ hira: "ん", kata: "ン", romaji: ["n"] }],
+        [{ hiragana: "ん", katakana: "ン", romaji: ["n"] }],
       ];
+
+      function debounce(func, time) {
+        let timeout;
+        return (...args) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), time);
+        };
+      }
 
       const activeResultClasses = [
         "bg-stone-100",
@@ -218,7 +233,7 @@
 
         if (e.key === "Enter") {
           const listItem = searchList.children[lastActiveIndex];
-          setPreview(listItem.id, listItem.textContent);
+          setPreview(listItem.id);
           searchInput.blur();
         } else if (e.key === "ArrowUp") {
           setActiveResult(
@@ -238,14 +253,6 @@
         searchList.classList.add("hidden");
         searchList.classList.remove("flex");
       });
-
-      function debounce(func, time) {
-        let timeout;
-        return (...args) => {
-          clearTimeout(timeout);
-          timeout = setTimeout(() => func.apply(this, args), time);
-        };
-      }
 
       let lastActiveIndex = null;
       function setActiveResult(index) {
@@ -276,16 +283,16 @@
           const relevant = [];
           const romajiRelavant = [];
 
-          for (const col of kana) {
+          for (const col of kanaChart) {
             for (const info of col) {
               if (!info) continue;
 
-              if (testHira && input.includes(info.hira)) {
-                relevant.push(info);
+              if (testHira && input.includes(info.hiragana)) {
+                relevant.push(info.hiragana);
                 break;
               }
-              if (testKata && input.includes(info.kata)) {
-                relevant.push(info);
+              if (testKata && input.includes(info.katakana)) {
+                relevant.push(info.katakana);
                 break;
               }
 
@@ -304,13 +311,18 @@
             if (l1 === l2) return p1 - p2; // then sort by earlier position
             return l2 - l1; // sort by longest
           });
-          relevant.push(...romajiRelavant.map(([info]) => info));
+          relevant.push(
+            ...romajiRelavant.flatMap(([info]) => [
+              info.hiragana,
+              info.katakana,
+            ])
+          );
 
           return relevant;
         }
 
         const newChildren = [];
-        getRelevantKana(event.target.value).forEach((info, index) => {
+        getRelevantKana(event.target.value).forEach((kana, index) => {
           if (index > 0) {
             const divider = document.createElement("li");
             divider.appendChild(document.createElement("hr"));
@@ -321,21 +333,18 @@
           const charSpan = document.createElement("span");
           const infoSpan = document.createElement("span");
 
-          infoSpan.textContent = getUnicodeName("hira", info);
+          infoSpan.textContent = getUnicodeName(kana);
           infoSpan.className = "text-stone-500 dark:text-stone-400 font-mono";
 
-          charSpan.textContent = info["hira"];
+          charSpan.textContent = kana;
           charSpan.className = "font-['Klee_One'] font-600 w-20";
 
-          listItem.id = info["hira"];
+          listItem.id = kana;
           listItem.setAttribute("role", "option");
           listItem.setAttribute("aria-selected", "false");
           listItem.setAttribute("data-", "false");
           listItem.addEventListener("click", () => {
-            setPreview(
-              info.hira,
-              `${info["hira"]} ${getUnicodeName("hira", info)}`
-            );
+            setPreview(kana);
             searchInput.blur();
           });
           listItem.addEventListener("pointerenter", () =>
@@ -356,16 +365,33 @@
         }
       }
 
-      function getUnicodeName(type, info) {
-        return `U+${info[type].codePointAt(0).toString(16)} ${
-          type === "hira" ? "HIRAGANA" : "KATAKANA"
-        } ${info.romaji.at(0)}`.toUpperCase();
+      function getSyllabary(char) {
+        return char.codePointAt(0) < 0x30a0 ? "hiragana" : "katakana";
+      }
+
+      function getUnicodeName(kana) {
+        const syllabary = getSyllabary(kana);
+
+        let romaji;
+
+        kanaChart.some((row) =>
+          row.some((cell) => {
+            if (!cell || cell[syllabary] !== kana) {
+              return false;
+            }
+            romaji = cell.romaji[0];
+            return true;
+          })
+        );
+
+        return `U+${kana
+          .codePointAt(0)
+          .toString(16)} ${syllabary} ${romaji}`.toUpperCase();
       }
 
       const previewSvg = document.getElementById("previewSvg");
       const previewText = document.getElementById("previewText");
-      const hiraganaBank = document.getElementById("hiraganaBank");
-      const katakanaBank = document.getElementById("katakanaBank");
+
       const controls = document.getElementById("controls").children;
       const progressSlider = document.getElementById("progressSlider");
 
@@ -380,13 +406,15 @@
 
       const { load } = svgLoader(previewSvg);
 
-      async function setPreview(char, title) {
+      async function setPreview(kana) {
+        const title = `${kana} ${getUnicodeName(kana)}`;
+
         progressSlider.setAttribute("disabled", "");
         controls[0].setAttribute("disabled", "");
         controls[1].setAttribute("disabled", "");
         controls[2].setAttribute("disabled", "");
 
-        const fileSrc = `./dist/hiragana/${char}.svg`;
+        const fileSrc = `./dist/${getSyllabary(kana)}/${kana}.svg`;
         if (animator) animator.stop();
         progressSlider.value = 1;
 
@@ -406,37 +434,34 @@
         }
       }
 
-      function setupBanks(bank, bankEl) {
-        bankEl.addEventListener("click", (e) => {
-          if (!e.target.textContent || e.target.textContent.length > 1) return;
-          setPreview(
-            e.target.textContent,
-            `${e.target.textContent} ${e.target.title}`
-          );
-        });
-
-        for (const col of kana) {
-          const options = document.createElement("div");
-          options.className = "flex flex-col gap-1";
-          for (const info of col) {
+      function setupBanks(syllabary, element) {
+        for (const col of kanaChart) {
+          for (const row of col) {
             const option = document.createElement("span");
 
-            option.className = "border border-stone-300 rounded-md h-10 w-10";
-            if (info) {
-              option.textContent = info[bank];
+            option.className = "border border-stone-300 rounded-md h-12 w-12";
+            if (row) {
+              option.textContent = row[syllabary];
               option.className +=
                 " inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
 
-              option.title = getUnicodeName(bank, info);
+              option.title = getUnicodeName(row[syllabary]);
             }
-            options.appendChild(option);
+
+            element.appendChild(option);
           }
-          bankEl.appendChild(options);
         }
+
+        element.addEventListener("click", (e) => {
+          if (!e.target.textContent || e.target.textContent.length > 1) return;
+          setPreview(e.target.textContent);
+        });
       }
 
-      setupBanks("hira", hiraganaBank);
-      setupBanks("kata", katakanaBank);
+      const hiraganaBank = document.getElementById("hiraganaBank");
+      const katakanaBank = document.getElementById("katakanaBank");
+      setupBanks("hiragana", hiraganaBank);
+      setupBanks("katakana", katakanaBank);
     </script>
   </body>
 </html>

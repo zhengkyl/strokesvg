@@ -19,7 +19,6 @@ export default defineConfig({
     // }),
   ],
   transformers: [transformerVariantGroup()],
-
   preflights: [
     {
       getCSS: () =>
@@ -29,7 +28,8 @@ export default defineConfig({
     {
       getCSS: () =>
         // Only include subset containing hiragana/katakana instead of all 119 subsets to keep CSS file small
-        `@font-face {
+        `\
+@font-face {
   font-family: 'Klee One';
   font-style: normal;
   font-weight: 600;
@@ -56,7 +56,7 @@ export default defineConfig({
     },
     {
       getCSS: () =>
-        `
+        `\
 svg[data-strokesvg] {
   --shadow: #ccc;
   --stroke: #000;
