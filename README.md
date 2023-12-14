@@ -1,12 +1,19 @@
 # strokesvg
 
-Japanese Kana SVGs with animatable strokes.
+Japanese kana SVGs with animatable strokes.
 
-Characters stroke shapes are based on [Klee One](https://github.com/fontworks-fonts/Klee) (licensed under the [SIL Open Font License](https://openfontlicense.org/)) with minimal changes.
+## Why
+
+The characters stroke SVGs provided here are based on [Klee One](https://github.com/fontworks-fonts/Klee) (licensed under the [SIL Open Font License](https://openfontlicense.org/)) which closely resembles handwriting. This makes them ideal for teaching how to write.
+
+Many existing animated stroke diagrams are based on simple line drawings which look unpolished. Other diagrams are based on fonts which don't resemble handwriting. While these projects didn't fit my needs, they do provide diagrams for a much larger set of characters.
+
+- [KanjiVG](https://github.com/KanjiVG/kanjivg)
+- [AnimCJK](https://github.com/parsimonhi/animCJK)
 
 ## Note
 
-- ク and グ significantly differ from Klee One to be more recognizable
+- ク and グ are modified from Klee One to be more recognizable
 
 ## TODO
 
@@ -20,13 +27,6 @@ Characters stroke shapes are based on [Klee One](https://github.com/fontworks-fo
   - [x] search
   - [x] use same font
   - [x] usable offline -> replace svg loader lib
-
-## Alternatives
-
-There are great open source projects in this area, but they didn't fit my needs. I highly recommend these if you're looking for animated SVGs for a larger character set.
-
-- [AnimCJK](https://github.com/parsimonhi/animCJK)
-- [KanjiVG](https://github.com/KanjiVG/kanjivg)
 
 ## Files
 

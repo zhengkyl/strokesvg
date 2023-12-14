@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 1024 1024" data-strokesvg="シ">
+  <defs>
+    <clipPath id="30b7d">
+      <use href="#30b7a"/>
+    </clipPath>
+    <clipPath id="30b7e">
+      <use href="#30b7b"/>
+    </clipPath>
+    <clipPath id="30b7f">
+      <use href="#30b7c"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30b7a" d="M476 378q16 0 25-17 10-16 10-27 0-16-15-26-16-11-47-25-32-15-68-27l-63-22q-26-9-34-9-13 0-20 8-6 8-9 16l-3 10q0 16 21 24 26 8 61 23 36 15 69 32 34 16 55 33 10 7 18 7z"/>
+    <path id="30b7b" d="M399 490q-20-11-55-23l-71-23q-35-11-61-17l-29-7q-9 0-20 12-10 12-10 25 0 9 7 14l18 7q56 17 102 36 46 18 87 40 12 5 18 5 14 0 22-9 7-10 9-21l2-10q0-16-19-29z"/>
+    <path id="30b7c" d="m255 867 13 11q7 3 15 3t15-2q8-2 18-7 110-44 204-103 95-59 171-124 77-64 131-123 55-58 83-100 30-43 30-57 0-11-8-11-15 0-40 30-18 20-61 62-42 41-102 93-60 51-132 102-71 51-147 93-75 42-149 65-16 6-39 6h-7l-6-1-7-1h-7q-12 0-12 7 0 5 11 25 13 19 26 32z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="m196 218 254 114" clip-path="url(#30b7d)"/>
+    <path style="--i:1" d="m94 420 263 96" clip-path="url(#30b7e)"/>
+    <path style="--i:2" d="M151 810c251 145 772-398 772-398" clip-path="url(#30b7f)"/>
+  </g>
+</svg>

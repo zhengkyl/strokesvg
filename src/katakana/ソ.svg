@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
+   version="2"
+   id="svg82337"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="ソ.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview82339"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.41748047"
+     inkscape:cx="185.63743"
+     inkscape:cy="417.98363"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg82337"
+     viewbox-width="10.5832"
+     scale-x="0.26458"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-page="true"
+     inkscape:snap-midpoints="false"
+     inkscape:object-paths="false"
+     inkscape:snap-others="true"
+     inkscape:snap-center="true"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-grids="false"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs82334">
+    <clipPath
+       id="clipPath7245">
+      <use
+         id="clone2479"
+         xlink:href="#path3" />
+    </clipPath>
+    <clipPath
+       id="clipPath2802">
+      <use
+         id="clone7678"
+         xlink:href="#path2" />
+    </clipPath>
+  </defs>
+  <g
+     id="g21">
+    <path
+       style="font-weight:600;font-size:1024px;line-height:1;font-family:'Klee One';fill:#f66d6d"
+       d="m 433.152,463.872 q 0,-3.072 -2.048,-9.216 -11.264,-24.576 -30.72,-53.248 -19.456,-28.672 -41.984,-57.344 -22.528,-28.672 -43.008,-52.224 -20.48,-24.576 -32.768,-39.936 -6.144,-8.192 -19.456,-8.192 -13.312,0 -26.624,9.216 -13.312,8.192 -13.312,21.504 0,7.168 6.144,15.36 38.912,47.104 72.704,99.328 34.816,51.2 62.464,102.4 6.144,11.264 20.48,11.264 16.384,0 31.744,-12.288 16.384,-12.288 16.384,-26.624 z"
+       id="path3" />
+    <path
+       style="font-weight:600;font-size:1024px;line-height:1;font-family:'Klee One';fill:#f5d36c"
+       d="m 285.696,917.504 q 20.48,0 67.584,-25.6 48.128,-25.6 110.592,-75.776 62.464,-51.2 129.024,-126.976 67.584,-76.8 128,-178.176 61.44,-102.4 104.448,-229.376 5.12,-17.408 5.12,-24.576 0,-13.312 -14.336,-24.576 -14.336,-11.264 -32.768,-17.408 -17.408,-7.168 -27.648,-7.168 -14.336,0 -14.336,12.288 0,7.168 4.096,16.384 4.096,8.192 4.096,20.48 0,5.12 -14.336,48.128 -13.312,41.984 -44.032,108.544 -30.72,66.56 -82.944,146.432 -51.2,79.872 -126.976,162.816 -74.752,82.944 -178.176,155.648 -29.696,20.48 -29.696,31.744 0,7.168 12.288,7.168 z"
+       id="path2" />
+  </g>
+  <g
+     id="g22">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 199.01541,198.16854 376.85897,447.99639"
+       id="path21"
+       sodipodi:nodetypes="cc"
+       clip-path="url(#clipPath7245)" />
+    <path
+       style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 739.55556,141.92281 C 891.69249,339.32831 540.12004,802.60474 328.15907,915.01287"
+       id="path22"
+       sodipodi:nodetypes="cc"
+       clip-path="url(#clipPath2802)" />
+  </g>
+</svg>
