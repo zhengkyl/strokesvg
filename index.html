@@ -12,18 +12,18 @@
     <title>StrokeSVG Preview</title>
   </head>
   <body class="max-w-screen-md mx-auto my-4 px-4">
-    <main un-cloak class="flex flex-col gap-4 dark:bg-stone-950">
+    <main un-cloak class="flex flex-col gap-4">
       <h1 class="font-bold text-3xl">StrokeSVG Preview</h1>
       <div class="relative">
         <input
           id="searchInput"
           type="text"
-          class="h-10 w-full rounded-md border border-stone-300 py-2 px-3 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:border-stone-800 dark:border-stone-800 dark:ring-offset-stone-950 dark:placeholder:text-stone-400 dark:focus-visible:ring-stone-300"
+          class="h-10 w-full rounded-md border border-stone-300 py-2 px-3 ring-offset-white placeholder:text-stone-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2"
           placeholder="Search for character..."
         />
         <ul
           id="searchList"
-          class="border border-stone-300 rounded-md flex-col overflow-y-auto max-h-96 w-full z-50 drop-shadow-lg absolute hidden bg-white dark:bg-stone-950"
+          class="border border-stone-300 rounded-md flex-col overflow-y-auto max-h-96 w-full z-50 drop-shadow-lg absolute hidden bg-white"
           role="listbox"
           onmousedown="event.preventDefault()"
         ></ul>
@@ -53,21 +53,21 @@
             <button
               aria-label="Previous stroke"
               disabled
-              class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
+              class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2"
             >
               <div class="i-fluent:rewind-16-regular text-4xl"></div>
             </button>
             <button
               aria-label="Play/Pause stroke"
               disabled
-              class="px-4 py-4 bg-stone-900 text-stone-50 hover:bg-stone-900/90 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50/90 rounded-md ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
+              class="px-4 py-4 bg-stone-900 text-stone-50 hover:bg-stone-900/90 rounded-md ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2"
             >
               <div class="i-fluent:video-play-pause-20-filled text-4xl"></div>
             </button>
             <button
               aria-label="Next stroke"
               disabled
-              class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 dark:ring-offset-stone-950 dark:focus-visible:ring-stone-300"
+              class="px-4 py-4 border border-stone-300 rounded-md inline-flex justify-center items-center hover:bg-stone-100 hover:text-stone-900 ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2"
             >
               <div class="i-fluent:fast-forward-16-regular text-4xl"></div>
             </button>
@@ -213,12 +213,7 @@
         };
       }
 
-      const activeResultClasses = [
-        "bg-stone-100",
-        "text-stone-900",
-        "dark:bg-stone-800",
-        "dark:text-stone-50",
-      ];
+      const activeResultClasses = ["bg-stone-100", "text-stone-900"];
 
       const searchInput = document.getElementById("searchInput");
       const searchList = document.getElementById("searchList");
@@ -334,7 +329,7 @@
           const infoSpan = document.createElement("span");
 
           infoSpan.textContent = getUnicodeName(kana);
-          infoSpan.className = "text-stone-500 dark:text-stone-400 font-mono";
+          infoSpan.className = "text-stone-500 font-mono";
 
           charSpan.textContent = kana;
           charSpan.className = "font-['Klee_One'] font-600 w-20";
@@ -351,7 +346,7 @@
             setActiveResult(index)
           );
           listItem.className =
-            "h-10 px-3 flex justify-between items-center cursor-pointer dark:border-stone-800";
+            "h-10 px-3 flex justify-between items-center cursor-pointer";
 
           listItem.append(charSpan, infoSpan);
           newChildren.push(listItem);
@@ -443,7 +438,7 @@
             if (row) {
               option.textContent = row[syllabary];
               option.className +=
-                " inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900 dark:border-stone-800 dark:hover:bg-stone-800 dark:hover:text-stone-50";
+                " inline-flex justify-center items-center cursor-pointer hover:bg-stone-100 hover:text-stone-900";
 
               option.title = getUnicodeName(row[syllabary]);
             }

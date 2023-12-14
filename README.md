@@ -1,6 +1,12 @@
 # strokesvg
 
-SVGs with animatable strokes for Japanese hiragana/katakana based on [Klee One](https://github.com/fontworks-fonts/Klee) which is licensed under the [SIL Open Font License](https://openfontlicense.org/).
+Japanese Kana SVGs with animatable strokes.
+
+Characters stroke shapes are based on [Klee One](https://github.com/fontworks-fonts/Klee) (licensed under the [SIL Open Font License](https://openfontlicense.org/)) with minimal changes.
+
+## Note
+
+- ク and グ significantly differ from Klee One to be more recognizable
 
 ## TODO
 
