@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-strokesvg="ノ" version="2" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="30ceb">
+      <use href="#30cea"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30cea" d="M196 921q15 0 53-20 39-18 92-55t114-89q61-54 122-121 61-69 115-151 56-83 95-177 7-17 7-26 0-14-15-25-13-11-31-18-18-8-31-8-8 0-10 2-6 5-6 10 0 6 4 14 3 7 3 18 0 17-22 65-20 47-61 115-41 66-101 142-59 76-136 149T219 879q-19 12-28 21-7 8-7 13 0 8 12 8z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="M742 167c56 340-502 747-502 747" clip-path="url(#30ceb)"/>
+  </g>
+</svg>

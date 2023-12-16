@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="2"
+   viewBox="0 0 1024 1024"
+   data-strokesvg="ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®"
+   id="svg9"
+   sodipodi:docname="ノ.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.83496094"
+     inkscape:cx="508.40702"
+     inkscape:cy="534.75556"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <defs
+     id="defs5">
+    <clipPath
+       id="clipPath7316">
+      <use
+         id="clone9947"
+         xlink:href="#flowRoot1" />
+    </clipPath>
+  </defs>
+  <g
+     id="g19">
+    <path
+       style="font-weight:600;font-size:1024px;line-height:1;font-family:'Klee One';fill:#f66d6d"
+       d="m 195.584,920.576 q 15.36,0 53.248,-19.456 38.912,-18.432 92.16,-55.296 53.248,-36.864 113.664,-89.088 61.44,-53.248 121.856,-120.832 61.44,-68.608 115.712,-150.528 55.296,-82.944 95.232,-177.152 6.144,-17.408 6.144,-26.624 0,-13.312 -14.336,-24.576 -13.312,-11.264 -31.744,-18.432 -17.408,-7.168 -30.72,-7.168 -8.192,0 -10.24,2.048 -5.12,4.096 -5.12,9.216 0,6.144 3.072,14.336 3.072,7.168 3.072,18.432 0,16.384 -21.504,64.512 -20.48,47.104 -61.44,114.688 -40.96,66.56 -100.352,142.336 -59.392,75.776 -136.192,149.504 -76.8,72.704 -168.96,132.096 -19.456,12.288 -27.648,21.504 -7.168,8.192 -7.168,13.312 0,7.168 11.264,7.168 z"
+       id="flowRoot1" />
+  </g>
+  <g
+     id="g20">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:128;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 742.34016,166.78861 C 797.74455,507.12213 239.83132,914.12792 239.83132,914.12792"
+       id="path19"
+       sodipodi:nodetypes="cc"
+       clip-path="url(#clipPath7316)" />
+  </g>
+</svg>
