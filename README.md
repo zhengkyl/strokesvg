@@ -40,31 +40,15 @@ This is where the raw unoptimized svg files are stored and directly edited using
 
 These files should NOT be used as is.
 
+#### /src/org.strokesvg.helper
+
+This Inkscape extention partially automates SVG creation.
+
 ## Usage
 
-The shadows and strokes have a default color which you can override using CSS variables.
+### Animating
 
-```css
-/* default colors */
-svg[data-strokesvg] {
-  --shadow: #ccc;
-  --stroke: #000;
-}
-```
-
-For more specific customization, you can just change the `fill`, `stroke`, and anything else directly.
-
-```css
-svg[data-strokesvg] > g[data-strokesvg="shadows"] > :nth-child(2) {
-  fill: blue;
-}
-
-svg[data-strokesvg] > g[data-strokesvg="strokes"] > :nth-child(2) {
-  stroke: red;
-}
-```
-
-Here is some CSS to have the stroke animation automatically start on page load. This is loosely based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, by itself, this only runs on page load.
+Here is some CSS to have the stroke animation automatically start on page load. This is based on the CSS from [AnimCJK](https://github.com/parsimonhi/animCJK). However, by itself, this only runs on page load.
 
 ```css
 svg[data-strokesvg] > g[data-strokesvg="strokes"] > * {
@@ -89,18 +73,68 @@ You can add javascript to restart the CSS animation programmatically, but you ca
 
 See `strokeAnimator` in [`index.js`](./index.js) for an overengineered example. Feel free to use it.
 
+### Colors
+
+The shadows and strokes have a default color which you can override using CSS variables.
+
+```css
+/* default colors */
+svg[data-strokesvg] {
+  --shadow: #ccc;
+  --stroke: #000;
+}
+```
+
+For more specific customization, you can just change the `fill`, `stroke`, and anything else directly.
+
+```css
+svg[data-strokesvg] > g[data-strokesvg="shadows"] > :nth-child(2) {
+  fill: blue;
+}
+
+svg[data-strokesvg] > g[data-strokesvg="strokes"] > :nth-child(2) {
+  stroke: red;
+}
+```
+
+For clarity with using custom css, see the format section below or look at the file directly.
+
 ## Format
 
-The first `<g>` element contains `<path>` elements representing shadows for each stroke/stroke section. These are visible while the strokes are animated. These are also used as clip masks for the strokes.
+```html
+<svg data-strokesvg="あ">
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path .../>
+    ... more paths or <g> with <path> children
+  </g>
+  <g
+    data-strokesvg="strokes"
+    style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round"
+  >
+    <path style="--i:0" clip-path="url(#...)" />
+    ... more paths or <g> with <path> children
+  </g>
+</svg>
+```
 
-The second `<g>` element contains `<path>` elements representing each stroke. These can be animated using the `stroke-dasharray` and `stroke-dashoffset` css properties. The stroke order is represented by the element order and duplicated via the `--i` css variable (useful for the CSS snippet).
+The first `<g>` element contains elements representing shadows for each stroke/stroke section. These are visible while the strokes are animated. These are also used as clip masks for the strokes.
 
-Some strokes self intersect, like in loops, so they are created from multiple stroke "shadows" and corresponding strokes so that the clipping works correctly. In these cases, parts of the same stroke are grouped together.
+The second `<g>` element contains elements representing each stroke. These can be animated using the `stroke-dasharray` and `stroke-dashoffset` css properties. The stroke order is represented by the element order and duplicated via the `--i` css variable (useful for the CSS snippet).
 
-## Generating Optimized SVGs
+Some strokes self intersect, like in loops, so they are created from multiple stroke "shadows" and corresponding strokes so that the clipping works correctly. In these cases, parts of the same stroke are grouped together. See `/dist/hiragana/あ.svg` for an example.
+
+## Development
+
+Run the demo site locally.
 
 ```sh
-pnpm run build
+pnpm run dev
+```
+
+Generate optimized files in `/dist` after changing files in the `/src` folder.
+
+```sh
+pnpm run min
 ```
 
 ### SVG Creation Workflow
@@ -119,8 +153,8 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 
 #### Step 3: Manually draw stroke paths
 
-- Use default stroke settings, except width is 128px.
-- Draw lines that cover each stroke shape.
+- Stroke width is 128px, line-cap is round.
+- Draw lines that cover each stroke shape. The start line-cap should be placed entirely before the start of the stroke, and the end line-cap should just barely cover the end of the stroke.
 
 - If a stroke unavoidably self-intersects, do the following.
   - Split the stroke shape into 2 (or more if necessary).
@@ -130,6 +164,11 @@ Steps 1, 2, and 4 can be automated using the Inkscape extension at `src/org.stro
 
 - For each stroke, clone the shape and use it as a clip path for the drawn stroke.
 - Make sure the strokes are above the shapes at the end.
+
+#### Step 5: Preview
+
+- `pnpm run min`
+- Make sure the animation looks good via the demo site.
 
 ### Misc Mysteries
 
