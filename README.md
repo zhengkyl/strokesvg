@@ -13,7 +13,11 @@ Many existing animated stroke diagrams are based on simple line drawings which l
 
 ## Note
 
-- ク and グ are modified from Klee One to be more recognizable
+The following character shapes are modified from Klee One for clarity.
+
+- ク
+- グ
+- ム
 
 ## TODO
 
