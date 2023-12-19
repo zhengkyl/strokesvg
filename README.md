@@ -18,6 +18,8 @@ The following character shapes are modified from Klee One for clarity.
 - ク
 - グ
 - ム
+- ル
+- レ
 
 ## TODO
 
