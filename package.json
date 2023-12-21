@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "unocss index.html --watch -m -o index.css & http-server",
-    "min:all": "svgo --recursive -f ./src -o ./dist",
-    "min": "svgo --recursive -f ./src/katakana -o ./dist/katakana"
+    "min:h": "svgo --recursive -f ./src/hiragana -o ./dist/hiragana",
+    "min:k": "svgo --recursive -f ./src/katakana -o ./dist/katakana",
+    "min": "pnpm min:h && pnpm min:k"
   },
   "license": "ISC",
   "devDependencies": {

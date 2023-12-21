@@ -21,19 +21,6 @@ The following character shapes are modified from Klee One for clarity.
 - ル
 - レ
 
-## TODO
-
-- [x] configure svgo
-  - [x] write plugin
-- [x] hiragana
-- [ ] katakana
-- [x] automate somehow?
-  - [x] semi automated with inkscape extension
-- [x] website
-  - [x] search
-  - [x] use same font
-  - [x] usable offline -> replace svg loader lib
-
 ## Files
 
 ### /dist
