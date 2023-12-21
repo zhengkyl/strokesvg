@@ -1,22 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 6144 1024" data-strokesvg="hero">
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 6144 1024" data-strokesvg="hero" style="background:#fff">
   <style>
-    html[data-color-mode="dark"] svg[data-strokesvg] {
-      --shadow: #000;
-      --stroke: #ccc;
-    }
     svg[data-strokesvg] > g[data-strokesvg="strokes"] > * {
-      --time: 0.5s; /* time to draw a "max length stroke" */
-      --gap: 0.3s; /* time between stroke starts */
-      --delay: 0.7s; /* time before first stroke */
-      animation: s var(--time) linear forwards calc(
-          var(--i) * var(--gap) + var(--delay)
-        );
+      --time: 8s;
+      --gap: 0.3s;
+      animation: s var(--time) linear infinite backwards calc(var(--i) * var(--gap));
       stroke-dasharray: 3333;
       stroke-dashoffset: 3333;
     }
 
     @keyframes s {
-      to {
+      0% {
+        stroke-dashoffset: 3333;
+      }
+      45% {
+        stroke-dashoffset: 3333;
+      }
+      55% {
+        stroke-dashoffset: 0;
+      }
+      100% {
         stroke-dashoffset: 0;
       }
     }
