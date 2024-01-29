@@ -374,4 +374,11 @@ export const kanaChart = [
     { hiragana: "ぇ", katakana: "ェ", romaji: ["small e", "e"] },
     { hiragana: "ぉ", katakana: "ォ", romaji: ["small o", "o"] },
   ],
+  [
+    { hiragana: "ゃ", katakana: "ャ", romaji: ["small ya", "ya"] },
+    null,
+    { hiragana: "ゅ", katakana: "ュ", romaji: ["small yu", "yu"] },
+    null,
+    { hiragana: "ょ", katakana: "ョ", romaji: ["small yo", "yo"] },
+  ],
 ];
