@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 1024 1024" data-strokesvg="ヲ">
+<svg data-strokesvg="ヲ" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="30f2d">
       <use href="#30f2a"/>
@@ -15,7 +15,7 @@
     <path id="30f2b" d="M681 391h-4l-15 2-22 3a10428 10428 0 0 1-323 40h-29a582 582 0 0 0-27-4c-7 0-10 3-10 9 0 4 2 11 7 21 5 9 11 18 20 26 8 9 17 13 26 13l32-3 66-8a10722 10722 0 0 0 175-22l73-9c47-7 85-68 31-68z"/>
     <path id="30f2c" d="M563 605a1101 1101 0 0 1-266 269l-19 16c-6 5-9 9-9 14v1l1 2c1 3 4 4 9 4 10 0 30-6 58-20s61-36 99-66a1064 1064 0 0 0 355-530c5-16 9-27 13-34 3-5 4-10 4-15 0-9-6-17-17-25-12-7-23-11-32-11-45 0-35 45-41 68-19 72-63 200-155 327z"/>
   </g>
-  <g style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" data-strokesvg="strokes">
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
     <path style="--i:0" d="m161 288 546-46" clip-path="url(#30f2d)"/>
     <path style="--i:1" d="m185 471 464-43" clip-path="url(#30f2e)"/>
     <path style="--i:2" d="M801 154C656 705 321 873 321 873" clip-path="url(#30f2f)"/>

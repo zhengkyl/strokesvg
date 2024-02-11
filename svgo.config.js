@@ -24,10 +24,6 @@ module.exports = {
       params: {
         selectors: [
           {
-            selector: "svg",
-            attributes: "xmlns:xlink",
-          },
-          {
             selector: "clipPath",
             attributes: "clipPathUnits",
           },
@@ -36,11 +32,11 @@ module.exports = {
             attributes: ["width", "height"],
           },
           {
-            selector: "g > path",
+            selector: "g",
             attributes: "style",
           },
           {
-            selector: "g > g",
+            selector: "path",
             attributes: "style",
           },
         ],
@@ -59,7 +55,12 @@ module.exports = {
       name: "pluginname",
       fn: (root, params, info) => {
         const svg = querySelector(root, "svg");
-        svg.attributes["data-strokesvg"] = path.basename(info.path, ".svg");
+        // Overwrite attributes to enforce desired order
+        svg.attributes = {
+          "data-strokesvg": path.basename(info.path, ".svg"),
+          viewBox: svg.attributes.viewBox,
+          xmlns: "http://www.w3.org/2000/svg",
+        };
 
         const nodes = querySelectorAll(root, "[xlink\\:href]");
         for (const node of nodes) {
