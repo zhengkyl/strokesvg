@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 1024 1024" data-strokesvg="ョ">
+  <defs>
+    <clipPath id="30e7d">
+      <use href="#30e7a"/>
+    </clipPath>
+    <clipPath id="30e7e">
+      <use href="#30e7b"/>
+    </clipPath>
+    <clipPath id="30e7f">
+      <use href="#30e7c"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30e7a" d="M622 831c-4 42 57 28 61-3l12-82a43965 43965 0 0 0 38-225c2-3 3-7 3-12 0-10-5-17-15-24-10-6-22-11-28-10-25 4-50 6-76 9a7860 7860 0 0 1-185 17c-66 4-73 7-79 7-17 0-25-7-41-7-12 0-15 2-5 24 5 9 11 18 18 26 9 11 18 16 46 10l59-6a5628 5628 0 0 0 163-14l71-6-42 296z"/>
+    <path id="30e7b" d="M641 694c46-4 48-61 8-55a4656 4656 0 0 1-279 26h-8c-15 1-33-5-44-6-6 0-8 2-8 8l4 16c3 8 8 16 15 25 7 8 16 12 28 12h8z"/>
+    <path id="30e7c" d="M622 831c-19 4-42 5-69 7a4584 4584 0 0 0-164 13l-59 4c-14 2-27-1-40-5l-14-2-6 1c-2 2-4 5-4 8l6 16c4 9 10 18 18 26 7 8 16 11 26 11l71-5a4575 4575 0 0 0 229-18l54-4 25-4c9-3 14-10 14-20 0-5-3-10-9-16-5-6-10-13-17-15-14-3-28-2-61 3z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="m236 519 459-52-45 328" clip-path="url(#30e7d)"/>
+    <path style="--i:1" d="m244 685 371-20" clip-path="url(#30e7e)"/>
+    <path style="--i:2" d="m199 874 446-14" clip-path="url(#30e7f)"/>
+  </g>
+</svg>
