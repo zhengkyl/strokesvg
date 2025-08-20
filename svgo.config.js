@@ -1,5 +1,5 @@
 const path = require("node:path");
-const { querySelectorAll, querySelector } = require("svgo/lib/xast.js");
+const { querySelectorAll, querySelector } = require("svgo");
 
 module.exports = {
   js2svg: {
