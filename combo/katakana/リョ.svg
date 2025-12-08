@@ -1,0 +1,37 @@
+<svg data-strokesvg="リ" viewBox="0 0 1824 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="30eac">
+      <use href="#30eaa"/>
+    </clipPath>
+    <clipPath id="30ead">
+      <use href="#30eab"/>
+    </clipPath>
+    <clipPath id="30e7d">
+      <use href="#30e7a"/>
+    </clipPath>
+    <clipPath id="30e7e">
+      <use href="#30e7b"/>
+    </clipPath>
+    <clipPath id="30e7f">
+      <use href="#30e7c"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30eaa" d="M373 641h5q13-2 20-17 8-16 8-32V471l1-92 1-82v-63q0-11-4-22-3-11-16-18-13-9-45-9-22 0-26 9v2q0 8 11 20 11 11 11 31v27l-1 57v71l-1 72v85l-2 13-1 14v4l5 18q4 13 12 23 9 10 22 10"/>
+    <path id="30eab" d="M703 408v-32l-1-80q0-42-2-82v-8q0-16-5-25-4-9-24-16-22-7-43-7l-14 2q-6 1-7 5v2q0 8 9 19 11 12 12 36 2 35 2 72l1 70q0 123-17 211-16 88-49 151-31 62-81 113-48 49-112 97-35 28-35 39 0 5 8 5 14 0 43-15 83-43 142-94 60-51 97-115 38-65 56-150 18-86 20-198"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="m342 120 28 459" clip-path="url(#30eac)"/>
+    <path style="--i:1" d="M618 92c188 633-226 857-226 857" clip-path="url(#30ead)"/>
+  </g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)" transform="translate(800, 0)">
+    <path id="30e7a" d="M622 831c-4 42 57 28 61-3l12-82 38-225q3-4 3-12 0-14-15-24c-10-6-22-11-28-10q-37 5-76 9l-185 17c-66 4-73 7-79 7-17 0-25-7-41-7-12 0-15 2-5 24q8 14 18 26c9 11 18 16 46 10l59-6 163-14 71-6z"/>
+    <path id="30e7b" d="M641 694c46-4 48-61 8-55a4656 4656 0 0 1-279 26h-8c-15 1-33-5-44-6q-8-1-8 8l4 16q5 12 15 25 10 12 28 12h8z"/>
+    <path id="30e7c" d="M622 831q-28 5-69 7l-164 13-59 4q-21 2-40-5l-14-2-6 1q-3 3-4 8l6 16q6 14 18 26 11 12 26 11l71-5a4575 4575 0 0 0 229-18l54-4 25-4q14-5 14-20 0-7-9-16-7-10-17-15c-14-3-28-2-61 3"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" transform="translate(800, 0)">
+    <path style="--i:2" d="m236 519 459-52-45 328" clip-path="url(#30e7d)"/>
+    <path style="--i:3" d="m244 685 371-20" clip-path="url(#30e7e)"/>
+    <path style="--i:4" d="m199 874 446-14" clip-path="url(#30e7f)"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg data-strokesvg="ニ" viewBox="0 0 1824 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="30cbc">
+      <use href="#30cba"/>
+    </clipPath>
+    <clipPath id="30cbd">
+      <use href="#30cbb"/>
+    </clipPath>
+    <clipPath id="30e3c">
+      <use href="#30e3a"/>
+    </clipPath>
+    <clipPath id="30e3d">
+      <use href="#30e3b"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30cba" d="M752 365v-3q-1-17-24-29-21-14-41-14-6 0-12 4-5 3-18 6l-52 10-80 11-85 10-72 9-38 4h-14q-21 0-33-3t-19-3l-7 2q-4 4-4 8 0 11 11 26t20 23q6 7 13 9l14 2h7l8-1 120-12 138-16 123-19q23-4 33-9 12-5 12-15"/>
+    <path id="30cbb" d="M892 702v-3q-1-10-19-25-17-17-37-19h-3q-10 0-18 3-8 4-16 4-156 1-313 16l-296 30h-8q-13 0-24-2-11-4-19-4-6 0-9 4-3 3-3 9 0 3 7 18 8 15 22 28 13 13 31 13h12l14-2q76-11 179-20 104-11 222-17 120-6 242-6 36 0 36-27"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="m186 377 508 1" clip-path="url(#30cbc)"/>
+    <path style="--i:1" d="m61 715 773-1" clip-path="url(#30cbd)"/>
+  </g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)" transform="translate(800, 0)">
+    <path id="30e3a" d="M679 525a1194 1194 0 0 1-85 137q-15 18-15 29 0 9 9 8 11 1 32-17 20-17 44-44a1647 1647 0 0 0 120-151l-3-11q-3-7-16-16-12-9-27-9l-7 1-62 19-96 28-235 68-89 22-8-1-11-1q-9 0-12 4l-2 4 8 15q9 12 23 23t29 11l13-2 38-10q175-55 352-107"/>
+    <path id="30e3b" d="m503 901 1 13q0 11 2 15l8 11q6 9 15 17 10 10 21 10l12-3q6-4 8-13 3-8 3-17l-2-18-10-35q-8-32-22-80L422 380q-7-11-26-11l-26-1q-19-1-25 5-4 4-4 7 0 7 8 13 9 6 17 14l5 11 4 13z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" transform="translate(800, 0)">
+    <path style="--i:2" d="M152 619c343-44 481-184 620-172L616 646" clip-path="url(#30e3c)"/>
+    <path style="--i:3" d="m344 302 30 95 163 510" clip-path="url(#30e3d)"/>
+  </g>
+</svg>

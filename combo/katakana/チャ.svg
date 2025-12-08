@@ -1,0 +1,37 @@
+<svg data-strokesvg="チ" viewBox="0 0 1824 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="30c1d">
+      <use href="#30c1a"/>
+    </clipPath>
+    <clipPath id="30c1e">
+      <use href="#30c1b"/>
+    </clipPath>
+    <clipPath id="30c1f">
+      <use href="#30c1c"/>
+    </clipPath>
+    <clipPath id="30e3c">
+      <use href="#30e3a"/>
+    </clipPath>
+    <clipPath id="30e3d">
+      <use href="#30e3b"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30c1a" d="m581 290 81-31 43-21q13-10 16-15l3-8q0-10-11-25t-26-27q-15-12-28-12l-5 1q-3 0-4 11v5q1 7-2 12-1 6-9 9-37 24-90 48a1897 1897 0 0 1-278 97q-34 8-34 22 0 10 21 10 12 0 39-5a1883 1883 0 0 0 142-30l75-20z"/>
+    <path id="30c1b" d="M916 481v-5q0-14-20-25-20-13-32-14h-4q-8 0-16 4-8 3-17 3a2280 2280 0 0 0-234 15l-71 7a11404 11404 0 0 0-338 36h-15l-16-3q-10-4-17-4h-3q-8 0-8 10 0 5 6 19 7 15 20 28 12 12 29 12l11-1 14-2 137-17q82-10 175-19l72-6a5767 5767 0 0 1 295-14q33 0 32-24"/>
+    <path id="30c1c" d="m594 414-3-86q-1-30-10-38c-32-25-94 0-67 21q3 3 4 10l2 15a1298 1298 0 0 1-3 189q-16 147-81 240-63 93-168 159-24 16-24 23 0 2 2 5 5 6 12 5l14-3q9-2 17-6 140-67 212-172 73-105 88-257 6-52 5-105"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="M684 89c75 206-388 263-388 263" clip-path="url(#30c1d)"/>
+    <path style="--i:1" d="m59 505 802-7" clip-path="url(#30c1e)"/>
+    <path style="--i:2" d="M528 215c84 379-21 588-229 720" clip-path="url(#30c1f)"/>
+  </g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)" transform="translate(800, 0)">
+    <path id="30e3a" d="M679 525a1194 1194 0 0 1-85 137q-15 18-15 29 0 9 9 8 11 1 32-17 20-17 44-44a1647 1647 0 0 0 120-151l-3-11q-3-7-16-16-12-9-27-9l-7 1-62 19-96 28-235 68-89 22-8-1-11-1q-9 0-12 4l-2 4 8 15q9 12 23 23t29 11l13-2 38-10q175-55 352-107"/>
+    <path id="30e3b" d="m503 901 1 13q0 11 2 15l8 11q6 9 15 17 10 10 21 10l12-3q6-4 8-13 3-8 3-17l-2-18-10-35q-8-32-22-80L422 380q-7-11-26-11l-26-1q-19-1-25 5-4 4-4 7 0 7 8 13 9 6 17 14l5 11 4 13z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" transform="translate(800, 0)">
+    <path style="--i:3" d="M152 619c343-44 481-184 620-172L616 646" clip-path="url(#30e3c)"/>
+    <path style="--i:4" d="m344 302 30 95 163 510" clip-path="url(#30e3d)"/>
+  </g>
+</svg>

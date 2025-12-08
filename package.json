@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "unocss index.html --watch -m -o index.css & http-server",
-    "min:h": "svgo --recursive -f ./src/hiragana -o ./dist/hiragana",
-    "min:k": "svgo --recursive -f ./src/katakana -o ./dist/katakana",
-    "min": "pnpm min:h && pnpm min:k"
+    "combo": "node combo.js && svgo --recursive -f ./combo/hiragana && svgo --recursive -f ./combo/katakana"
   },
   "license": "ISC",
   "devDependencies": {
     "@iconify-json/fluent": "^1.1.35",
     "@unocss/cli": "^0.55.7",
     "http-server": "^14.1.1",
+    "jsdom": "^27.2.0",
     "svgo": "^4.0.0",
     "unocss": "^0.55.7"
   },

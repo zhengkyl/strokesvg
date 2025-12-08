@@ -1,0 +1,37 @@
+<svg data-strokesvg="ミ" viewBox="0 0 1824 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="30dfd">
+      <use href="#30dfa"/>
+    </clipPath>
+    <clipPath id="30dfe">
+      <use href="#30dfb"/>
+    </clipPath>
+    <clipPath id="30dff">
+      <use href="#30dfc"/>
+    </clipPath>
+    <clipPath id="30e3c">
+      <use href="#30e3a"/>
+    </clipPath>
+    <clipPath id="30e3d">
+      <use href="#30e3b"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="30dfa" d="M340 278a2313 2313 0 0 1 233 57q60 17 109 40 7 3 13 3 9 0 19-7 10-9 10-34 0-18-16-27-62-30-158-51t-200-38q-15-4-26 8-6 9-8 18l-1 12q0 10 7 13z"/>
+    <path id="30dfb" d="M645 590q15 0 21-8 6-10 7-20l2-12q0-17-16-26-30-17-74-30-44-15-89-26a1613 1613 0 0 0-150-33c-6 0-27 3-27 36q1 11 7 14 6 4 17 7a1692 1692 0 0 1 288 95z"/>
+    <path id="30dfc" d="m269 682-2 7v6q0 17 21 23 40 12 96 33 56 20 118 46 62 24 119 52 57 27 99 52 6 3 11 3 11 0 22-10t11-34q0-9-3-17-3-9-11-14-45-27-104-52-58-25-119-47-60-22-112-38l-84-25-35-10q-17 0-27 25"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="m254 227 409 111" clip-path="url(#30dfd)"/>
+    <path style="--i:1" d="m258 438 356 111" clip-path="url(#30dfe)"/>
+    <path style="--i:2" d="m210 653 494 205" clip-path="url(#30dff)"/>
+  </g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)" transform="translate(800, 0)">
+    <path id="30e3a" d="M679 525a1194 1194 0 0 1-85 137q-15 18-15 29 0 9 9 8 11 1 32-17 20-17 44-44a1647 1647 0 0 0 120-151l-3-11q-3-7-16-16-12-9-27-9l-7 1-62 19-96 28-235 68-89 22-8-1-11-1q-9 0-12 4l-2 4 8 15q9 12 23 23t29 11l13-2 38-10q175-55 352-107"/>
+    <path id="30e3b" d="m503 901 1 13q0 11 2 15l8 11q6 9 15 17 10 10 21 10l12-3q6-4 8-13 3-8 3-17l-2-18-10-35q-8-32-22-80L422 380q-7-11-26-11l-26-1q-19-1-25 5-4 4-4 7 0 7 8 13 9 6 17 14l5 11 4 13z"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" transform="translate(800, 0)">
+    <path style="--i:3" d="M152 619c343-44 481-184 620-172L616 646" clip-path="url(#30e3c)"/>
+    <path style="--i:4" d="m344 302 30 95 163 510" clip-path="url(#30e3d)"/>
+  </g>
+</svg>

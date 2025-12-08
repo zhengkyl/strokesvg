@@ -1,0 +1,32 @@
+<svg data-strokesvg="り" viewBox="0 0 1824 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="308ac">
+      <use href="#308aa"/>
+    </clipPath>
+    <clipPath id="308ad">
+      <use href="#308ab"/>
+    </clipPath>
+    <clipPath id="3085c">
+      <use href="#3085a"/>
+    </clipPath>
+    <clipPath id="3085d">
+      <use href="#3085b"/>
+    </clipPath>
+  </defs>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)">
+    <path id="308aa" d="M330 197v2l-8 71-9 99q-4 53-4 105 0 90 15 138 14 48 45 48 11 0 20-6 10-6 11-16l8-37 11-49 13-47 9-30q6-15 6-24 0-12-8-12-5 0-11 7l-18 26-37 58-1-21v-25q0-58 6-132 7-73 17-144l1-8 1-9q0-17-17-25-16-8-34-11l-19-3q-12 0-14 6v2q0 6 9 16 8 9 8 21"/>
+    <path id="308ab" d="M597 147v3q0 7 10 15t13 21l8 119q3 55 3 107 0 44-2 87l-5 84q-4 50-25 100-20 49-51 93-30 44-65 79-33 35-65 55-35 22-35 33 0 4 7 4 16 0 48-14 33-14 74-43t80-72 65-99q28-57 34-128 5-48 6-87l2-77q0-56-4-114l-10-136q0-14-10-26-9-13-54-13-21 0-24 9"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round">
+    <path style="--i:0" d="M270 105c171 107-26 379 62 530l91-141" clip-path="url(#308ac)"/>
+    <path style="--i:1" d="M556 95c243 173 74 795-122 821" clip-path="url(#308ad)"/>
+  </g>
+  <g data-strokesvg="shadows" style="fill:var(--shadow,#ccc)" transform="translate(800, 0)">
+    <path id="3085a" d="M451 520q-49 31-78 61-31 32-59 84l-2-123v-31q0-21-12-32-12-10-28-12l-24-3q-12 0-12 4-1 9 6 14 6 6 10 15 4 8 4 17v23a1974 1974 0 0 0 16 267q6 40 12 63 6 20 23 20 12 0 23-10 11-11 11-27 0-10-7-26-6-15-8-44v-4q0-20 14-53 15-34 43-71a395 395 0 0 1 272-150h2q35 0 63 26t28 71v2q-1 45-25 85-24 39-57 69c-72 65-130 74-140 47-6-16-17-56-34-59q-7 2-10 17l-1 30q0 12 5 31 6 19 17 34c17 21 68 36 151-18a383 383 0 0 0 131-145q23-46 23-97t-23-82q-22-32-59-47-36-16-80-16c-38 0-114 17-195 70"/>
+    <path id="3085b" d="M544 346q-18 0-19 5v2q1 6 7 13 9 4 14 13 5 5 6 30 5 85 3 171l-1 75v61l-1 32q0 27-3 48a426 426 0 0 1-40 142q-5 11-14 21-9 12-9 19 0 6 7 7t22-10q16-9 34-35c9-12 54-85 59-207q3-48 3-134c0-138-2-199-6-221q-3-21-18-26a177 177 0 0 0-44-6"/>
+  </g>
+  <g data-strokesvg="strokes" style="stroke:var(--stroke,#000);fill:none;stroke-width:128;stroke-linecap:round" transform="translate(800, 0)">
+    <path style="--i:2" d="M231 400c53 153-13 282 47 450 53-279 368-479 479-314 125 186-229 360-252 265" clip-path="url(#3085c)"/>
+    <path style="--i:3" d="M536 280c102 280-11 652-11 652" clip-path="url(#3085d)"/>
+  </g>
+</svg>
