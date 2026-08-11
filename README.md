@@ -4,6 +4,10 @@ Japanese kana SVGs with animatable strokes.
 
 <img src="./src/hero.svg">
 
+Demo: https://zhengkyl.github.io/strokesvg/
+
+> Press play to animate fully. Try scrubbing timeline. Use fast forward/rewind button to jump to next/previous stroke.
+
 ## Why
 
 The characters stroke SVGs provided here are based on [Klee One](https://github.com/fontworks-fonts/Klee) (licensed under the [SIL Open Font License](https://openfontlicense.org/)) which closely resembles handwriting. This makes them ideal for teaching how to write.
